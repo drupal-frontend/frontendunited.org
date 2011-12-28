@@ -1,0 +1,278 @@
+/* !----- / Variables / ----- */
+@import 'fu2012.variables.less';
+@import 'fu2012.mixins.less';
+
+/* !---- Base typography ----- */
+body {
+  font-family: @font-std-fam;
+  font-weight: @font-std-wgt;
+  background: @color-background;
+  color: @color-text-primary;
+  line-height: 1.4em;
+  font-size: @font-size-base;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+p,
+.basetext {
+  margin-bottom: @parapgraph-space;
+}
+
+em {
+  .bold;
+   font-style: normal;
+}
+
+input, textarea {
+  font-size: @font-size-base;
+}
+
+// Site name
+.site-name {
+  font-family: @font-hvy-fam;
+  font-weight: @font-hvy-wgt;
+  font-size: 4em;
+  line-height: 1em;
+  padding: 0 @default-spacing;
+  text-decoration: none;
+
+  a:link,
+  a:visited {
+    color: @color-text-primary;
+    border: none;
+  }
+  
+  h2 {
+    margin: 0;
+  }  
+
+  strong {
+    color: @color-negative;
+  }
+  
+  span {
+    .block-title;
+    display: block;
+    margin-top: @default-spacing;
+    color: @color-text-80;
+  }
+}
+
+.front .site-name {
+  font-size: 6.428571429em;
+  
+    span {
+    margin-top: 1.5 * @default-spacing;
+  }
+}
+
+// Page title
+.title {
+  font-family: @font-hvy-fam;
+  font-weight: @font-hvy-wgt;
+  text-transform: uppercase;
+  font-size: @font-size-title;
+  line-height: 1.2em;
+  padding: 0 @default-spacing;
+}
+
+// Block titles
+.block-title {
+  font-size: @font-size-h2;
+  font-family: @font-hvy-fam;
+  font-weight: @font-hvy-wgt;
+  text-transform: uppercase;
+  letter-spacing: 0.03125em; //1/32px;
+  line-height: 1em;
+  margin-bottom: 0.8em;
+  
+}
+
+// Content headings H2
+.text-content h2 {
+  font-family: @font-hvy-fam;
+  font-weight: @font-hvy-fam;
+  font-size: @font-size-h3;
+}
+
+// Content headings H3
+.text-content h3 {
+  font-family: @font-hvy-fam;
+  font-weight: @font-hvy-fam;
+  font-size: @font-size-h3;
+}
+
+
+// Homepage callout
+.callout {
+  color: @color-text-90;
+  font-family: @font-lgt-fam;
+  font-size: @font-size-h3;
+  font-weight: @font-lgt-wgt;
+  line-height: 1.2em;
+  padding: 20px @default-spacing 0;
+  width: 58.333%;
+  margin-bottom: 2.5em;
+  
+  em {
+    font-style: normal;
+    color: @color-negative;
+  }
+}
+
+// Formatting text content
+.text-content {
+  ul {
+    margin-left: 20px;
+    list-style: square;
+    margin-bottom: @parapgraph-space;
+  }
+  
+  ol {
+    margin-left: 20px;
+    list-style: decimal;
+    margin-bottom: @parapgraph-space;
+  }
+} 
+
+blockquote {
+}
+
+// Link styles
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    margin-bottom: -1px;
+    border-bottom: 1px dotted;
+  }
+  &:link {
+    color: @color-link-dark;
+    border-color: @color-link-dark;
+  }
+  &:visited {
+    color: @color-link;
+    border-color: @color-link;
+  }
+  &:hover {
+    border: none;
+    margin-bottom: 0;
+  }
+}
+
+// Colors on color overlays
+.coverlayer {
+  color: @color-negative;
+  
+  .block-title {
+    font-size: @font-size-h2 * 1.5;
+  }
+  
+  a {
+  &:link {
+    color: @color-negative;
+    border-color: @color-negative;
+  }
+  &:visited {
+    color: @color-negative;
+    border-color: @color-negative;
+  }
+  }
+}
+
+// Alternative styling
+.style-alternative {
+  color: @color-negative;
+  
+  .block-title {
+    color: @color-negative;
+  }
+}
+
+// Text styles
+.secondary {
+  color: @color-text-50;
+}
+
+.info {
+  a:link,
+  a:visited {
+    color: inherit;
+    border: none;
+    margin-bottom: 0;
+  }
+  a:hover,
+  a:active {
+    border-bottom: 1px dotted #fff;
+    margin-bottom: -1px;
+  }
+}
+
+// Removed underlining on main menu
+.region-menu a {
+  border-bottom: none;
+  margin-bottom: 0;
+}  
+
+// Menus
+.zone-user {
+  a:link,
+  a:visited {
+    color: @color-text-primary;
+    margin-right: 16px;
+    border-color: @color-text-primary;
+  }
+}
+
+.region-menu {
+  a {
+    text-transform: uppercase;
+  }
+}
+
+// Forms
+.form-item {
+  margin: 0.5em 0;
+  
+  label {
+    width: 130px;
+    display: inline-block;
+    .bold;
+  }
+  .description {
+    .basetext;
+  }
+  
+}
+
+input[type=submit],
+button {
+  font-family: @font-std-fam;
+  font-weight: @font-std-wgt;
+  font-size: @font-size-base;
+  text-transform: uppercase;
+}
+
+
+
+// Mailchimp
+.block-mailchimp-lists {
+  .block-title {
+    background: transparent url(../images/fu2012-sprites.png) no-repeat 0px -772px;
+    padding-left: 50px;
+  }
+  .mailchimp-newsletter-wrapper {
+    margin-bottom: 1em;
+  }
+}
+
+// Twitter block
+.block-block-2 {
+  .block-title {
+     background: transparent url(../images/fu2012-sprites.png) no-repeat -54px -729px;
+     padding-left: 50px;
+  }
+}

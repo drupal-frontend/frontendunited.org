@@ -1,0 +1,163 @@
+/* !----- / external libraries ----- */
+@import '../less_libraries/library.general.less';
+
+/* !----- / Diagnostic styles ----- */ 
+//@import '../less_libraries/library.general.diagnostic.less';
+
+/* !----- / Developer ----- */
+// Developer and temporary styling goes here. 
+// Refactor and move before going into production.
+
+img, video, object, embed {
+  max-width: 100%;
+}
+
+/* ! Menus */
+// Replace styling from unset system.menus.css.
+ul.menu {
+  border: none;
+  list-style: none;
+}
+
+// Default (vertical) menu styling
+ul {
+  
+  .expanded   {  }
+  .collapsed  {  }
+  .leaf       {  }
+  
+  &.inline,
+  &.links.inline {
+  }
+  
+  &.inline li {
+  }
+  
+  &.inline > li > a {
+  }
+} // ul 
+ 
+// Horizontal menus
+.horizontal {
+  .leaf,
+  .expanded,
+  .collapsed {
+    display: inline-block;
+  }
+} 
+ 
+.expanded,
+.collapsed,
+.leaf {
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  color: blue;
+}
+
+/* ! System Tabs */
+// @todo Move to external library
+
+.tabs {
+  margin-bottom: 20px;
+
+  ul.primary {
+    padding: 0 3px;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+  
+    li {
+      display: block;
+      float: left; /* LTR */
+      vertical-align: bottom;
+      margin: 0 5px 0 0; /* LTR */
+
+      a {
+        color: #222;
+        background-color: #ccc;
+        height: 1.8em;
+        line-height: 1.9;
+        display: block;
+        font-size: 12px;
+        float: left; /* not LTR */
+        padding: 0 10px 3px;
+        margin: 0;
+        .border-radius(6px);
+        text-decoration: none;
+      }
+      a:link,
+      a:visited {
+        border-bottom: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+  
+      &.active a {
+        background-color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+      }
+    } // .tabs ul.primary li
+  } // .tabs ul.primary
+  
+  ul.secondary {
+    border-bottom: none;
+    padding: 0.5em 0;
+  
+    li {
+      display: block;
+      float: left; /* LTR */
+    
+      &:last-child {
+        border-right: none; /* LTR */
+      }
+      &:first-child {
+        padding-left: 0; /* LTR */
+      }
+      a {
+        padding: 0.25em 0.5em;
+      }
+      a.active {
+        background: #f2f2f2;
+        border-bottom: none;
+        .border-radius(5px);
+      }
+    } //.tabs ul.secondary li
+  } //.tabs ul.secondary  
+} //.tabs   
+  
+ul.action-links {
+  list-style: none;
+  margin: 5px;
+  padding: 0.5em 1em;
+
+  li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  li a {
+    padding-left: 15px;
+    background: url(../images/add.png) no-repeat left center;
+    margin: 0 10px 0 0;
+  }
+} //ul.action-links
+
+/* ! Messages */
+// @todo Move to external library
+
+.messages {
+  padding: 20px 0 5px;
+  margin: 0 auto;
+  clear: both
+}
+.featured #messages {
+  background: #f0f0f0;
+  background: rgba(30, 50, 10, 0.08);
+}
+div.messages {
+  margin: 8px 15px;
+}

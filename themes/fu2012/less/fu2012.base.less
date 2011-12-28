@@ -1,0 +1,276 @@
+/* !----- / external libraries ----- */
+@import '../../../libraries/less_libraries/library.general.less';
+@import '../../../libraries/less_libraries/library.minimal.forms.less';
+
+/* !----- / Variables / ----- */
+@import 'fu2012.variables.less';
+@import 'fu2012.mixins.less';
+
+img, video, object, embed {
+  max-width: 100%;
+}
+
+/* !----- / Styles ----- */
+.style-alternative {
+  background: @color-background-alternative;
+}
+
+
+/* !----- / Sections ----- */
+.section-content {
+  padding-bottom: 2 * @default-spacing;
+  padding-top: 2 * @default-spacing;
+  border-top: 1px solid @color-orange-light;
+  border-bottom: 1px solid @color-orange-light;
+}
+
+.section-footer {
+  background: @color-orange-light;
+  background: @color-orange-light-rgba;
+}
+
+.front .section-footer {
+  background: transparent;
+}
+
+
+/* !----- / Zones ----- */
+.front .zone-branding-wrapper {
+  background: transparent url(../images/lego-white.png) 95% 300px no-repeat;
+  background-attachment: fixed;
+}
+
+.zone-header {
+  padding-top: @default-spacing;
+  padding-bottom: @default-spacing;
+}
+
+.front .zone-header-wrapper {
+  background: #fff url(../images/lego-orange.png) 95% 300px no-repeat;
+  background-attachment: fixed;
+}
+
+html .zone-postscript {
+  padding-top: 20px;
+}
+
+.zone-postscript-wrapper {
+  border-bottom: 1px solid @color-orange-light;
+}
+
+html .zone-footer {
+  margin-top: 40px;
+}
+
+.zone-branding {
+  padding-top: 22px;
+}
+
+.front .zone-branding {
+  padding-top: 52px;
+}
+
+
+// Move background image when toolbar is active
+.toolbar.front .zone-branding-wrapper,
+.toolbar.front .zone-header-wrapper {
+  background-position: 95% 330px;
+}
+
+.toolbar.toolbar-drawer.front .zone-branding-wrapper,
+.toolbar.toolbar-drawer.front .zone-header-wrapper {
+  background-position: 95% 365px;
+}
+
+
+/* !----- / Regions ----- */
+
+
+
+/* !----- / Blocks ----- */
+.block {
+  padding: @default-spacing;
+}
+
+.block-secondary {
+  background: @color-orange-light;
+  background: @color-orange-light-rgba;
+  overflow: hidden;
+}
+
+/* !----- / Menus ----- */
+// Replace styling from unset system.menus.css.
+ul.menu {
+  border: none;
+  list-style: none;
+}
+
+// Horizontal menus
+.horizontal {
+  .leaf,
+  .expanded,
+  .collapsed {
+    display: inline-block;
+  }
+} 
+ 
+.expanded,
+.collapsed,
+.leaf {
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  color: blue;
+}
+
+/* !----- / System Tabs ----- */
+// @todo Move to external library
+
+.tabs {
+  ul.primary {
+    padding: 0 3px;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+  
+    li {
+      display: block;
+      float: left; /* LTR */
+      vertical-align: bottom;
+      margin: 0 5px 0 0; /* LTR */
+
+      a {
+        color: #222;
+        background-color: #ccc;
+        height: 1.8em;
+        line-height: 1.9;
+        display: block;
+        font-size: 12px;
+        float: left; /* not LTR */
+        padding: 0 10px 3px;
+        margin: 0;
+        .border-radius(6px);
+        text-decoration: none;
+      }
+      a:link,
+      a:visited {
+        border-bottom: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+  
+      &.active a {
+        background-color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+      }
+    } // .tabs ul.primary li
+  } // .tabs ul.primary
+  
+  ul.secondary {
+    border-bottom: none;
+    padding: 0.5em 0;
+  
+    li {
+      display: block;
+      float: left; /* LTR */
+    
+      &:last-child {
+        border-right: none; /* LTR */
+      }
+      &:first-child {
+        padding-left: 0; /* LTR */
+      }
+      a {
+        padding: 0.25em 0.5em;
+      }
+      a.active {
+        background: #f2f2f2;
+        border-bottom: none;
+        .border-radius(5px);
+      }
+    } //.tabs ul.secondary li
+  } //.tabs ul.secondary  
+} //.tabs   
+  
+ul.action-links {
+  list-style: none;
+  margin: 5px;
+  padding: 0.5em 1em;
+
+  li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  li a {
+    padding-left: 15px;
+    background: url(../images/add.png) no-repeat left center;
+    margin: 0 10px 0 0;
+  }
+} //ul.action-links
+
+
+/* !----- / Messages ----- */
+// @todo Move to external library
+
+.messages {
+  padding: 20px 0 5px;
+  margin: 0 auto;
+  clear: both
+}
+.featured #messages {
+  background: #f0f0f0;
+  background: rgba(30, 50, 10, 0.08);
+}
+div.messages {
+  margin: 8px 15px;
+}
+
+
+/* !----- / Main menu ----- */
+.topbar {
+  background: #fff;
+  
+  a {
+    display: block;
+    float: left;
+    padding: @default-spacing;
+  
+    &:link,
+    &:visited {
+      color: #000;
+    }
+  
+    &.active {
+      background: @color-negative;
+      color: @color-text-primary;
+      
+      &[href^='/#'] {
+        background: #fff;
+        color: #000;
+      }
+      &:hover {
+        background: @color-background;
+        color: @color-text-primary;
+      }
+    }
+    &:hover {
+      background: @color-background;
+      color: @color-text-primary;
+    }
+  }  
+}
+
+
+/* !----- / Logo ----- */
+.site-logo {
+  float: right;
+  width: 32.9787234%; // 310/940px;
+  
+  a {
+    border: none;
+  }
+}
