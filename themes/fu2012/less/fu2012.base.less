@@ -1,8 +1,13 @@
+// Huh?
+
+
 /* !----- / external libraries ----- */
-@import '../../../libraries/less_libraries/library.general.less';
-@import '../../../libraries/less_libraries/library.minimal.forms.less';
+@import 'mixins.less';
+@import 'library.general.less';
+@import 'library.minimal.forms.less';
 
 /* !----- / Variables / ----- */
+@import 'variables.less';
 @import 'fu2012.variables.less';
 @import 'fu2012.mixins.less';
 
@@ -58,10 +63,6 @@ html .zone-postscript {
   border-bottom: 1px solid @color-orange-light;
 }
 
-html .zone-footer {
-  margin-top: 40px;
-}
-
 .zone-branding {
   padding-top: 22px;
 }
@@ -70,6 +71,9 @@ html .zone-footer {
   padding-top: 52px;
 }
 
+html .zone-footer {
+  margin-top: 40px;
+}
 
 // Move background image when toolbar is active
 .toolbar.front .zone-branding-wrapper,
