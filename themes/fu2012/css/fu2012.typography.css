@@ -1,37 +1,211 @@
-body{font-family:'proxima-nova-n4','proxima-nova',sans-serif;font-weight:300;background:#c76533;color:#ffffff;line-height:1.4em;font-size:14px;}
-.bold{font-weight:600;}
-p,.basetext{margin-bottom:1em;}
-em{font-weight:600;font-style:normal;}
-input,textarea{font-size:14px;}
-.site-name{font-family:'league-gothic-n4','league-gothic',sans-serif;font-weight:400;font-size:4em;line-height:1em;padding:0 16px;text-decoration:none;}.site-name a:link,.site-name a:visited{color:#ffffff;border:none;}
-.site-name h2{margin:0;}
-.site-name strong{color:#000000;}
-.site-name span{font-size:32.000000004px;font-family:'league-gothic-n4','league-gothic',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:0.03125em;line-height:1em;margin-bottom:0.8em;display:block;margin-top:16px;color:#f4e0d6;}
-.front .site-name{font-size:6.428571429em;}.front .site-name span{margin-top:24px;}
-.title{font-family:'league-gothic-n4','league-gothic',sans-serif;font-weight:400;text-transform:uppercase;font-size:42px;line-height:1.2em;padding:0 16px;}
-.block-title{font-size:32.000000004px;font-family:'league-gothic-n4','league-gothic',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:0.03125em;line-height:1em;margin-bottom:0.8em;}
-.text-content h2{font-family:'league-gothic-n4','league-gothic',sans-serif;font-weight:'league-gothic-n4','league-gothic',sans-serif;font-size:23.999999996px;}
-.text-content h3{font-family:'league-gothic-n4','league-gothic',sans-serif;font-weight:'league-gothic-n4','league-gothic',sans-serif;font-size:23.999999996px;}
-.callout{color:#f0d4c6;font-family:'museo-slab',sans-serif;font-size:23.999999996px;font-weight:300;line-height:1.2em;padding:20px 16px 0;width:58.333%;margin-bottom:2.5em;}.callout em{font-style:normal;color:#000000;}
-.text-content ul{margin-left:20px;list-style:square;margin-bottom:1em;}
-.text-content ol{margin-left:20px;list-style:decimal;margin-bottom:1em;}
-a:link,a:visited{text-decoration:none;margin-bottom:-1px;border-bottom:1px dotted;}
-a:link{color:blue;border-color:blue;}
-a:visited{color:blue;border-color:blue;}
-a:hover{border:none;margin-bottom:0;}
-.coverlayer{color:#000000;}.coverlayer .block-title{font-size:48.000000006px;}
-.coverlayer a:link{color:#000000;border-color:#000000;}
-.coverlayer a:visited{color:#000000;border-color:#000000;}
-.style-alternative{color:#000000;}.style-alternative .block-title{color:#000000;}
-.secondary{color:#e3b299;}
-.info a:link,.info a:visited{color:inherit;border:none;margin-bottom:0;}
-.info a:hover,.info a:active{border-bottom:1px dotted #fff;margin-bottom:-1px;}
-.region-menu a{border-bottom:none;margin-bottom:0;}
-.zone-user a:link,.zone-user a:visited{color:#ffffff;margin-right:16px;border-color:#ffffff;}
-.region-menu a{text-transform:uppercase;}
-.form-item{margin:0.5em 0;}.form-item label{width:130px;display:inline-block;font-weight:600;}
-.form-item .description{margin-bottom:1em;}
-input[type=submit],button{font-family:'proxima-nova-n4','proxima-nova',sans-serif;font-weight:300;font-size:14px;text-transform:uppercase;}
-.block-mailchimp-lists .block-title{background:transparent url(../images/fu2012-sprites.png) no-repeat 0px -772px;padding-left:50px;}
-.block-mailchimp-lists .mailchimp-newsletter-wrapper{margin-bottom:1em;}
-.block-block-2 .block-title{background:transparent url(../images/fu2012-sprites.png) no-repeat -54px -729px;padding-left:50px;}
+/* !----- / Variables / ----- */
+/* !---- Base typography ----- */
+body {
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 300;
+  background: #c76533;
+  color: #ffffff;
+  line-height: 1.4em;
+  font-size: 14px;
+}
+.wf-inactive body {
+  font-size: 12.6px;
+}
+.wf-inactive .front .site-name {
+  font-size: 4.4em;
+}
+.wf-inactive .site-name {
+  font-size: 3.1em;
+}
+.wf-inactive .site-name span {
+  font-size: 24px;
+}
+.bold {
+  font-weight: 600;
+}
+p, .basetext {
+  margin-bottom: 1em;
+}
+em {
+  font-weight: 600;
+  font-style: normal;
+}
+input, textarea {
+  font-size: 14px;
+}
+.site-name {
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 1em;
+  padding: 0 16px;
+  text-decoration: none;
+}
+.site-name a:link, .site-name a:visited {
+  color: #ffffff;
+  border: none;
+}
+.site-name h2 {
+  margin: 0;
+}
+.site-name strong {
+  color: #000000;
+}
+.site-name span {
+  font-size: 32.000000004px;
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03125em;
+  line-height: 1em;
+  margin-bottom: 0.8em;
+  display: block;
+  margin-top: 16px;
+  color: #f4e0d6;
+}
+.front .site-name {
+  font-size: 6.428571429em;
+}
+.front .site-name span {
+  margin-top: 24px;
+}
+.title {
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.2em;
+  padding: 0 16px;
+}
+.block-title {
+  font-size: 32.000000004px;
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03125em;
+  line-height: 1em;
+  margin-bottom: 0.8em;
+}
+.text-content h2 {
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-size: 23.999999996px;
+}
+.text-content h3 {
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-size: 23.999999996px;
+}
+.callout {
+  color: #f0d4c6;
+  font-family: 'museo-slab', sans-serif;
+  font-size: 23.999999996px;
+  font-weight: 300;
+  line-height: 1.2em;
+  padding: 20px 16px 0;
+  width: 58.333%;
+  margin-bottom: 2.5em;
+}
+.callout em {
+  font-style: normal;
+  color: #000000;
+}
+.text-content ul {
+  margin-left: 20px;
+  list-style: square;
+  margin-bottom: 1em;
+}
+.text-content ol {
+  margin-left: 20px;
+  list-style: decimal;
+  margin-bottom: 1em;
+}
+a:link, a:visited {
+  text-decoration: none;
+  margin-bottom: -1px;
+  border-bottom: 1px dotted;
+}
+a:link {
+  color: #225c81;
+  border-color: #225c81;
+}
+a:visited {
+  color: #5696c0;
+  border-color: #5696c0;
+}
+a:hover {
+  border: none;
+  margin-bottom: 0;
+}
+.coverlayer {
+  color: #000000;
+}
+.coverlayer .block-title {
+  font-size: 48.000000006px;
+}
+.coverlayer a:link {
+  color: #000000;
+  border-color: #000000;
+}
+.coverlayer a:visited {
+  color: #000000;
+  border-color: #000000;
+}
+.style-alternative {
+  color: #000000;
+}
+.style-alternative .block-title {
+  color: #000000;
+}
+.secondary {
+  color: #e3b299;
+}
+.info a:link, .info a:visited {
+  color: inherit;
+  border: none;
+  margin-bottom: 0;
+}
+.info a:hover, .info a:active {
+  border-bottom: 1px dotted #fff;
+  margin-bottom: -1px;
+}
+.region-menu a {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.zone-user a:link, .zone-user a:visited {
+  color: #ffffff;
+  margin-right: 16px;
+  border-color: #ffffff;
+}
+.region-menu a {
+  text-transform: uppercase;
+}
+.form-item {
+  margin: 0.5em 0;
+}
+.form-item label {
+  width: 130px;
+  display: inline-block;
+  font-weight: 600;
+}
+.form-item .description {
+  margin-bottom: 1em;
+}
+input[type=submit], button {
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.block-mailchimp-lists .block-title {
+  background: transparent url(../images/fu2012-sprites.png) no-repeat 0px -772px;
+  padding-left: 50px;
+}
+.block-mailchimp-lists .mailchimp-newsletter-wrapper {
+  margin-bottom: 1em;
+}
+.block-block-2 .block-title {
+  background: transparent url(../images/fu2012-sprites.png) no-repeat -54px -729px;
+  padding-left: 50px;
+}
