@@ -12,7 +12,8 @@ body {
   font-size: @font-size-base;
 }
 
-.wf-inactive {
+.wf-inactive,
+.no-js {
   body        { font-size: @font-size-small; }
   .front .site-name  { font-size: 4.4em; }
   .site-name  { 
@@ -44,7 +45,6 @@ input, textarea {
 // Site name
 .site-name {
   font-family: @font-hvy-fam;
-  font-weight: @font-hvy-wgt;
   font-size: 4em;
   line-height: 1em;
   padding: 0 @default-spacing;
@@ -56,12 +56,18 @@ input, textarea {
     border: none;
   }
   
+  h1 {
+    font-weight: @font-hvy-wgt;
+  }
+  
   h2 {
+    font-weight: @font-hvy-wgt;
     margin: 0;
   }  
 
   strong {
     color: @color-negative;
+    font-weight: @font-hvy-wgt;
   }
   
   span {
@@ -131,6 +137,7 @@ input, textarea {
   em {
     font-style: normal;
     color: @color-negative;
+    font-weight: @font-lgt-wgt;
   }
 }
 
