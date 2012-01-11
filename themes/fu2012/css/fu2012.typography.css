@@ -8,16 +8,16 @@ body {
   line-height: 1.4em;
   font-size: 14px;
 }
-.wf-inactive body {
+.wf-inactive body, .no-js body {
   font-size: 12.6px;
 }
-.wf-inactive .front .site-name {
+.wf-inactive .front .site-name, .no-js .front .site-name {
   font-size: 4.4em;
 }
-.wf-inactive .site-name {
+.wf-inactive .site-name, .no-js .site-name {
   font-size: 3.1em;
 }
-.wf-inactive .site-name span {
+.wf-inactive .site-name span, .no-js .site-name span {
   font-size: 24px;
 }
 .bold {
@@ -35,7 +35,6 @@ input, textarea {
 }
 .site-name {
   font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-weight: 400;
   font-size: 4em;
   line-height: 1em;
   padding: 0 16px;
@@ -45,11 +44,16 @@ input, textarea {
   color: #ffffff;
   border: none;
 }
+.site-name h1 {
+  font-weight: 400;
+}
 .site-name h2 {
+  font-weight: 400;
   margin: 0;
 }
 .site-name strong {
   color: #000000;
+  font-weight: 400;
 }
 .site-name span {
   font-size: 32.000000004px;
@@ -109,6 +113,7 @@ input, textarea {
 .callout em {
   font-style: normal;
   color: #000000;
+  font-weight: 300;
 }
 .text-content ul {
   margin-left: 20px;
