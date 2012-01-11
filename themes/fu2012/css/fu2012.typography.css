@@ -131,12 +131,12 @@ a:link, a:visited {
   border-bottom: 1px dotted;
 }
 a:link {
-  color: #225c81;
-  border-color: #225c81;
+  color: #246091;
+  border-color: #246091;
 }
 a:visited {
-  color: #225c81;
-  border-color: #225c81;
+  color: #246091;
+  border-color: #246091;
 }
 a:hover {
   border: none;
