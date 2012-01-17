@@ -491,3 +491,11 @@ div.messages {
 .site-logo a {
   border: none;
 }
+/* !----- / Webform ----- */
+.webform-client-form {
+  margin: 0 -16px;
+  padding: 16px;
+  background: #d2845c;
+  background: rgba(210, 132, 92, 0.5);
+  overflow: hidden;
+}
