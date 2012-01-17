@@ -55,6 +55,7 @@ function fu2012_preprocess_field(&$vars) {
   // Add .text-content to selected fields
   switch ($vars['element']['#field_type']) {
     case 'text_long':
+    case 'text_with_summary':
        $vars['classes_array'][] = 'text-content';
       break;
 

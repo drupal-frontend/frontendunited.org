@@ -91,19 +91,19 @@ input, textarea {
   margin-bottom: 0.8em;
 }
 .text-content h2 {
-  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-weight: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-size: 23.999999996px;
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 600;
+  font-size: 18.000000004px;
 }
 .text-content h3 {
-  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-weight: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-size: 23.999999996px;
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 600;
+  font-size: 18.000000004px;
 }
 .callout {
   color: #f0d4c6;
   font-family: 'museo-slab', sans-serif;
-  font-size: 23.999999996px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.2em;
   padding: 20px 16px 0;
