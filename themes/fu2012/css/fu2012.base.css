@@ -493,7 +493,7 @@ div.messages {
 }
 /* !----- / Webform ----- */
 .webform-client-form {
-  margin: 0 -16px;
+  margin: 16px -16px;
   padding: 16px;
   background: #d2845c;
   background: rgba(210, 132, 92, 0.5);
