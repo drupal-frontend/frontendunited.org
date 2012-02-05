@@ -8,29 +8,35 @@ body {
   line-height: 1.4em;
   font-size: 14px;
 }
-.wf-inactive body, .no-js body {
+.wf-inactive body,
+.no-js body {
   font-size: 12.6px;
 }
-.wf-inactive .front .site-name, .no-js .front .site-name {
+.wf-inactive .front .site-name,
+.no-js .front .site-name {
   font-size: 4.4em;
 }
-.wf-inactive .site-name, .no-js .site-name {
+.wf-inactive .site-name,
+.no-js .site-name {
   font-size: 3.1em;
 }
-.wf-inactive .site-name span, .no-js .site-name span {
+.wf-inactive .site-name span,
+.no-js .site-name span {
   font-size: 24px;
 }
 .bold {
   font-weight: 600;
 }
-p, .basetext {
+p,
+.basetext {
   margin-bottom: 1em;
 }
 em {
   font-weight: 600;
   font-style: normal;
 }
-input, textarea {
+input,
+textarea {
   font-size: 14px;
 }
 .site-name {
@@ -40,7 +46,8 @@ input, textarea {
   padding: 0 16px;
   text-decoration: none;
 }
-.site-name a:link, .site-name a:visited {
+.site-name a:link,
+.site-name a:visited {
   color: #ffffff;
   border: none;
 }
@@ -91,9 +98,17 @@ input, textarea {
   margin-bottom: 0.8em;
 }
 .text-content h2 {
-  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
-  font-weight: 600;
-  font-size: 18.000000004px;
+  font-size: 32.000000004px;
+  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03125em;
+  line-height: 1em;
+  margin-bottom: 0.8em;
+  margin: 0.8em 0 0.4em;
+}
+.text-content h2:first-child {
+  margin-top: 0;
 }
 .text-content h3 {
   font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
@@ -125,7 +140,8 @@ input, textarea {
   list-style: decimal;
   margin-bottom: 1em;
 }
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   margin-bottom: -1px;
   border-bottom: 1px dotted;
@@ -165,12 +181,14 @@ a:hover {
 .secondary {
   color: #e3b299;
 }
-.info a:link, .info a:visited {
+.info a:link,
+.info a:visited {
   color: inherit;
   border: none;
   margin-bottom: 0;
 }
-.info a:hover, .info a:active {
+.info a:hover,
+.info a:active {
   border-bottom: 1px dotted #fff;
   margin-bottom: -1px;
 }
@@ -178,7 +196,8 @@ a:hover {
   border-bottom: none;
   margin-bottom: 0;
 }
-.zone-user a:link, .zone-user a:visited {
+.zone-user a:link,
+.zone-user a:visited {
   color: #ffffff;
   margin-right: 16px;
   border-color: #ffffff;
@@ -197,7 +216,8 @@ a:hover {
 .form-item .description {
   margin-bottom: 1em;
 }
-input[type=submit], button {
+input[type=submit],
+button {
   font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
   font-weight: 300;
   font-size: 14px;

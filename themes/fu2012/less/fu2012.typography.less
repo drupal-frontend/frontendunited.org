@@ -110,9 +110,15 @@ input, textarea {
 
 // Content headings H2
 .text-content h2 {
-  font-family: @font-std-fam;
-  .bold;
-  font-size: @font-size-h3;
+  .block-title;
+  margin: 0.8em 0 0.4em;
+  //font-family: @font-std-fam;
+  //.bold;
+  //font-size: @font-size-h3;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 // Content headings H3
