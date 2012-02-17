@@ -16,8 +16,6 @@ regions[content] = "Content"
 
 ; ----- / CUSTOM REGIONS / -----
 
-regions[user_first] = "User Bar First"
-regions[user_second] = User Bar Second
 regions[branding] = Branding
 regions[search] = Search
 regions[menu] = Menu
@@ -25,25 +23,28 @@ regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
 regions[header_first] = Header First
 regions[header_second] = Header Second
-regions[preface_first] = Preface First
-regions[preface_second] = Preface Second
-regions[preface_third] = Preface Third
 regions[postscript_first] = Postscript First
 regions[postscript_second] = Postscript Second
 regions[postscript_third] = Postscript Third
 regions[postscript_fourth] = Postscript Fourth
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
+regions[footer_third] = Footer Third
+regions[preface_first] = Preface First
+regions[preface_second] = Preface Second
+
+
 
 ; ----- / ZONES / -----
 
+zones[sponsor_premium] = Sponsor Premium
+zones[sponsor_gold] = Sponsorbar Gold
+zones[sponsor] = Sponsorbar
 zones[header] = Header
 zones[content] = Content
 zones[footer] = Footer
-zones[user] = User
 zones[branding] = Branding
 zones[menu] = Menu
-zones[preface] = Preface
 zones[postscript] = Postscript
 
 
