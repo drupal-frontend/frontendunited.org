@@ -531,13 +531,21 @@ div.messages {
   position: absolute;
   right: 0;
   top: -5px;
+}
+.ticket-link a:link,
+.ticket-link a:visited {
+  display: block;
   padding-right: 128px;
   background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
   height: 60px;
   line-height: 60px;
-}
-.ticket-link a:link,
-.ticket-link a:visited {
   color: #ffffff;
-  border-color: #ffffff;
+  border: none;
+}
+.ticket-link a:hover,
+.ticket-link a:active {
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
 }

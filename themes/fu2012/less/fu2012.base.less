@@ -299,14 +299,18 @@ div.messages {
   position: absolute;
   right: 0;
   top: -5px;
-  padding-right: 128px;
-  background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
-  height: 60px;
-  line-height: 60px;
   a:link,
   a:visited {
+    display: block;
+    padding-right: 128px;
+    background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
+    height: 60px;
+    line-height: 60px;
     color: @color-text-primary;
-    border-color: @color-text-primary;
+    border: none;
+  } 
+  a:hover,
+  a:active {
+    .opacity(80);
   }
-  
 }
