@@ -75,7 +75,7 @@ textarea {
   color: #f4e0d6;
 }
 .front .site-name {
-  font-size: 6.428571429em;
+  font-size: 5.428571429em;
 }
 .front .site-name span {
   margin-top: 24px;
@@ -118,12 +118,12 @@ textarea {
 .callout {
   color: #f0d4c6;
   font-family: 'museo-slab', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 1.2em;
-  padding: 20px 16px 0;
-  width: 58.333%;
-  margin-bottom: 2.5em;
+  line-height: 1.3em;
+  padding: 0 16px 0;
+  width: 54.333%;
+  margin-bottom: 2em;
 }
 .callout em {
   font-style: normal;
@@ -157,6 +157,11 @@ a:visited {
 a:hover {
   border: none;
   margin-bottom: 0;
+}
+a.alternative:link,
+a.alternative:visited {
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .coverlayer {
   color: #000000;

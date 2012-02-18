@@ -79,7 +79,7 @@ input, textarea {
 }
 
 .front .site-name {
-  font-size: 6.428571429em;
+  font-size: 5.428571429em;
   
     span {
     margin-top: 1.5 * @default-spacing;
@@ -133,12 +133,12 @@ input, textarea {
 .callout {
   color: @color-text-90;
   font-family: @font-lgt-fam;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: @font-lgt-wgt;
-  line-height: 1.2em;
-  padding: 20px @default-spacing 0;
-  width: 58.333%;
-  margin-bottom: 2.5em;
+  line-height: 1.3em;
+  padding: 0 @default-spacing 0;
+  width: 54.333%;
+  margin-bottom: 2em;
   
   em {
     font-style: normal;
@@ -184,6 +184,13 @@ a {
   &:hover {
     border: none;
     margin-bottom: 0;
+  }
+  &.alternative {
+    &:link,
+    &:visited {
+      color: @color-text-primary;
+      border-color: @color-text-primary;
+    }
   }
 }
 

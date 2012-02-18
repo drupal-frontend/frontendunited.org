@@ -290,9 +290,6 @@ embed {
   background: #d2845c;
   background: rgba(210, 132, 92, 0.5);
 }
-.zone-alternative {
-  background: #f0d4c6;
-}
 .front .section-footer {
   background: transparent;
 }
@@ -320,10 +317,13 @@ html .zone-postscript {
   padding-top: 22px;
 }
 .front .zone-branding {
-  padding-top: 52px;
+  padding-top: 28px;
 }
 html .zone-footer {
   margin-top: 40px;
+}
+.zone-alternative {
+  background: #f0d4c6;
 }
 .toolbar.front .zone-branding-wrapper,
 .toolbar.front .zone-header-wrapper {
@@ -364,8 +364,8 @@ ul.menu {
 }
 /* !----- / System Tabs ----- */
 .tabs ul.primary {
-  padding: 0 3px;
-  margin: 0;
+  padding: 0;
+  margin: 0 16px;
   overflow: hidden;
   border: none;
 }
@@ -487,7 +487,7 @@ div.messages {
 .topbar a {
   display: block;
   float: left;
-  padding: 16px;
+  padding: 10.666666666666666px 16px;
 }
 .topbar a:link,
 .topbar a:visited {
@@ -512,7 +512,8 @@ div.messages {
 /* !----- / Logo ----- */
 .site-logo {
   float: right;
-  width: 32.9787234%;
+  width: 14.478723%;
+  padding: 16px 16px 12.8px;
 }
 .site-logo a {
   border: none;
@@ -524,4 +525,19 @@ div.messages {
   background: #d2845c;
   background: rgba(210, 132, 92, 0.5);
   overflow: hidden;
+}
+/* !----- / Ticket link ----- */
+.ticket-link {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  padding-right: 128px;
+  background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
+  height: 60px;
+  line-height: 60px;
+}
+.ticket-link a:link,
+.ticket-link a:visited {
+  color: #ffffff;
+  border-color: #ffffff;
 }

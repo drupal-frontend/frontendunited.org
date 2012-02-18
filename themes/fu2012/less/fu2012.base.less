@@ -35,10 +35,6 @@ img, video, object, embed {
   background: @color-orange-light-rgba;
 }
 
-.zone-alternative {
-  background: @color-text-90;
-}
-
 .front .section-footer {
   background: transparent;
 }
@@ -74,11 +70,15 @@ html .zone-postscript {
 }
 
 .front .zone-branding {
-  padding-top: 52px;
+  padding-top: 28px;
 }
 
 html .zone-footer {
   margin-top: 40px;
+}
+
+.zone-alternative {
+  background: @color-text-90;
 }
 
 // Move background image when toolbar is active
@@ -140,8 +140,8 @@ ul.menu {
 
 .tabs {
   ul.primary {
-    padding: 0 3px;
-    margin: 0;
+    padding: 0;
+    margin: 0 @default-spacing;
     overflow: hidden;
     border: none;
   
@@ -247,7 +247,7 @@ div.messages {
   a {
     display: block;
     float: left;
-    padding: @default-spacing;
+    padding: (@default-spacing/1.5) @default-spacing;
   
     &:link,
     &:visited {
@@ -278,8 +278,8 @@ div.messages {
 /* !----- / Logo ----- */
 .site-logo {
   float: right;
-  width: 32.9787234%; // 310/940px;
-  
+  width: 14.478723%;
+  padding: @default-spacing @default-spacing (@default-spacing/1.25);
   a {
     border: none;
   }
@@ -292,4 +292,21 @@ div.messages {
   background: @color-orange-light;
   background: @color-orange-light-rgba;
   overflow: hidden;
+}
+
+/* !----- / Ticket link ----- */
+.ticket-link {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  padding-right: 128px;
+  background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
+  height: 60px;
+  line-height: 60px;
+  a:link,
+  a:visited {
+    color: @color-text-primary;
+    border-color: @color-text-primary;
+  }
+  
 }
