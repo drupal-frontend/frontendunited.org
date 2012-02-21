@@ -194,6 +194,18 @@ a {
   }
 }
 
+.button {
+  font-family: @font-std-fam;
+  font-weight: @font-std-wgt;
+  font-size: @font-size-base;
+  text-transform: uppercase;
+  &:link,
+  &:visited {
+    border-bottom: none;
+    color: @color-text-primary
+  }
+}
+
 // Colors on color overlays
 .coverlayer {
   color: @color-negative;

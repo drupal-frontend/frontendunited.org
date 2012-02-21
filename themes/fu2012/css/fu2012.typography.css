@@ -163,6 +163,17 @@ a.alternative:visited {
   color: #ffffff;
   border-color: #ffffff;
 }
+.button {
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.button:link,
+.button:visited {
+  border-bottom: none;
+  color: #ffffff;
+}
 .coverlayer {
   color: #000000;
 }
