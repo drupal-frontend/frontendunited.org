@@ -36,6 +36,8 @@ function sponsors_views_default_views() {
   $handler->display->display_options['style_options']['class'] = 'horizontal-list';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 1;
+  $handler->display->display_options['row_options']['default_field_elements'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -204,9 +206,11 @@ function sponsors_views_default_views() {
   $handler->display->display_options['filters']['tid']['hierarchy'] = 1;
 
   /* Display: Bronze (horizontal) */
-  $handler = $view->new_display('block', 'Bronze (horizontal)', 'block_sponsor_bronze');
+  $handler = $view->new_display('block', 'Bronze (horizontal)', 'sponsor_bronze');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Gold sponsors';
+  $handler->display->display_options['title'] = 'Bronze sponsors';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'bronze-sponsor';
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
