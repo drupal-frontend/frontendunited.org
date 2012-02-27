@@ -13,7 +13,7 @@ function sponsors_taxonomy_default_vocabularies() {
       'name' => 'Sponsor Level',
       'machine_name' => 'sponsor_level',
       'description' => 'Levels for sponsors (Gold, Bronze, Obsidian, Teal, Polkadotted)',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
       'metatags' => array(),
