@@ -20,6 +20,35 @@ img, video, object, embed {
   //background: @color-background-alternative;
 }
 
+.imagelink {
+  display: inline-block;
+  
+  &:link,
+  &:visited {
+    border: none;
+    margin: 4px;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border: 4px solid @color-orange-light;
+    border-color: @color-orange-light-rgba;
+    background: @color-orange-light;
+    background: @color-orange-light-rgba;
+    margin: 0;
+  }
+  img {
+    display: block;
+  }
+}
+
+.horizontal-list {
+  li {
+    display: inline;
+    display: inline-block;
+    margin-right: @default-spacing;
+  }
+}
 
 /* !----- / Sections ----- */
 .section-content {

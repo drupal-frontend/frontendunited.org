@@ -278,6 +278,31 @@ embed {
   max-width: 100%;
 }
 /* !----- / Styles ----- */
+.imagelink {
+  display: inline-block;
+}
+.imagelink:link,
+.imagelink:visited {
+  border: none;
+  margin: 4px;
+}
+.imagelink:hover,
+.imagelink:focus,
+.imagelink:active {
+  border: 4px solid #d2845c;
+  border-color: rgba(210, 132, 92, 0.5);
+  background: #d2845c;
+  background: rgba(210, 132, 92, 0.5);
+  margin: 0;
+}
+.imagelink img {
+  display: block;
+}
+.horizontal-list li {
+  display: inline;
+  display: inline-block;
+  margin-right: 16px;
+}
 /* !----- / Sections ----- */
 .section-content {
   padding-bottom: 32px;
