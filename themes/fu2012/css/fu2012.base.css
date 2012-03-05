@@ -574,3 +574,16 @@ div.messages {
   -moz-opacity: 0.8;
   opacity: 0.8;
 }
+/* !----- / Sponsors ----- */
+.block-sponsor-lists-sponsor-premium {
+  padding: 8px 10px;
+}
+.block-sponsor-lists-sponsor-premium a.imagelink {
+  float: left;
+}
+.block-sponsor-lists-sponsor-premium p.inline-block {
+  display: inline-block;
+  line-height: 44px;
+  margin-bottom: 0;
+  padding: 8px 0 0 10px;
+}
