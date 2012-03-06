@@ -588,3 +588,15 @@ div.messages {
   margin-bottom: 0;
   padding: 8px 0 0 10px;
 }
+/* !----- / Schedule tables ----- */
+.schedule-table td {
+  width: 35%;
+  padding: 4px 1.5%;
+  border-bottom: 1px solid #d2845c;
+}
+.schedule-table td:first-child {
+  width: 20%;
+}
+.schedule-table td[[object Object]="2"] {
+  width: 63%;
+}
