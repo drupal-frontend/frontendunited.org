@@ -320,17 +320,21 @@ embed {
   background: transparent;
 }
 /* !----- / Zones ----- */
-.front .zone-branding-wrapper {
-  background: transparent url(../images/lego-white.png) 95% 300px no-repeat;
+.style-branded {
+  background-image: url(../images/lego-white.png);
+  background-position: 95% 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.style-branded-alt {
+  background-image: url(../images/lego-orange.png);
+  background-position: 95% 300px;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .zone-header {
   padding-top: 16px;
   padding-bottom: 16px;
-}
-.front .zone-header-wrapper {
-  background: #ffffff url(../images/lego-orange.png) 95% 300px no-repeat;
-  background-attachment: fixed;
 }
 html .zone-postscript {
   padding-top: 20px;
@@ -349,14 +353,17 @@ html .zone-footer {
   margin-top: 40px;
 }
 .zone-alternative {
-  background: #f0d4c6;
+  background-color: #f0d4c6;
 }
-.toolbar.front .zone-branding-wrapper,
-.toolbar.front .zone-header-wrapper {
+.zone-negative {
+  background-color: #ffffff;
+}
+.toolbar.front .style-branded,
+.toolbar.front .style-branded-alt {
   background-position: 95% 330px;
 }
-.toolbar.toolbar-drawer.front .zone-branding-wrapper,
-.toolbar.toolbar-drawer.front .zone-header-wrapper {
+.toolbar.toolbar-drawer.front .style-branded,
+.toolbar.toolbar-drawer.front .style-branded-alt {
   background-position: 95% 365px;
 }
 /* !----- / Regions ----- */
