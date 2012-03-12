@@ -188,11 +188,21 @@ a.alternative:visited {
   color: #000000;
   border-color: #000000;
 }
-.style-alternative {
+.zone-alternative,
+.zone-negative {
   color: #000000;
 }
-.style-alternative .block-title {
+.zone-alternative .block-title,
+.zone-negative .block-title {
   color: #000000;
+}
+.zone-sponsor-gold .block-title {
+  color: #c76533;
+  line-height: 1.4em;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  text-transform: none;
 }
 .secondary {
   color: #e3b299;

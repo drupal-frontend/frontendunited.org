@@ -227,11 +227,23 @@ a {
 }
 
 // Alternative styling
-.style-alternative {
+.zone-alternative,
+.zone-negative {
   color: @color-negative;
   
   .block-title {
     color: @color-negative;
+  }
+}
+
+.zone-sponsor-gold {
+  .block-title {
+    color: @color-background;
+    line-height: 1.4em;
+    font-size: @font-size-base;
+    font-weight: 600; 
+    font-family: @font-std-fam;
+    text-transform: none;
   }
 }
 
