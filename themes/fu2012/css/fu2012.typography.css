@@ -8,29 +8,35 @@ body {
   line-height: 1.4em;
   font-size: 14px;
 }
-.wf-inactive body, .no-js body {
+.wf-inactive body,
+.no-js body {
   font-size: 12.6px;
 }
-.wf-inactive .front .site-name, .no-js .front .site-name {
+.wf-inactive .front .site-name,
+.no-js .front .site-name {
   font-size: 4.4em;
 }
-.wf-inactive .site-name, .no-js .site-name {
+.wf-inactive .site-name,
+.no-js .site-name {
   font-size: 3.1em;
 }
-.wf-inactive .site-name span, .no-js .site-name span {
+.wf-inactive .site-name span,
+.no-js .site-name span {
   font-size: 24px;
 }
 .bold {
   font-weight: 600;
 }
-p, .basetext {
+p,
+.basetext {
   margin-bottom: 1em;
 }
 em {
   font-weight: 600;
   font-style: normal;
 }
-input, textarea {
+input,
+textarea {
   font-size: 14px;
 }
 .site-name {
@@ -40,7 +46,8 @@ input, textarea {
   padding: 0 16px;
   text-decoration: none;
 }
-.site-name a:link, .site-name a:visited {
+.site-name a:link,
+.site-name a:visited {
   color: #ffffff;
   border: none;
 }
@@ -68,7 +75,7 @@ input, textarea {
   color: #f4e0d6;
 }
 .front .site-name {
-  font-size: 6.428571429em;
+  font-size: 5.428571429em;
 }
 .front .site-name span {
   margin-top: 24px;
@@ -91,24 +98,32 @@ input, textarea {
   margin-bottom: 0.8em;
 }
 .text-content h2 {
+  font-size: 32.000000004px;
   font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-weight: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-size: 23.999999996px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03125em;
+  line-height: 1em;
+  margin-bottom: 0.8em;
+  margin: 0.8em 0 0.4em;
+}
+.text-content h2:first-child {
+  margin-top: 0;
 }
 .text-content h3 {
-  font-family: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-weight: 'league-gothic-n4', 'league-gothic', sans-serif;
-  font-size: 23.999999996px;
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 600;
+  font-size: 18.000000004px;
 }
 .callout {
   color: #f0d4c6;
   font-family: 'museo-slab', sans-serif;
-  font-size: 23.999999996px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 1.2em;
-  padding: 20px 16px 0;
-  width: 58.333%;
-  margin-bottom: 2.5em;
+  line-height: 1.3em;
+  padding: 0 16px 0;
+  width: 54.333%;
+  margin-bottom: 2em;
 }
 .callout em {
   font-style: normal;
@@ -125,22 +140,39 @@ input, textarea {
   list-style: decimal;
   margin-bottom: 1em;
 }
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   margin-bottom: -1px;
   border-bottom: 1px dotted;
 }
 a:link {
-  color: #225c81;
-  border-color: #225c81;
+  color: #246091;
+  border-color: #246091;
 }
 a:visited {
-  color: #225c81;
-  border-color: #225c81;
+  color: #246091;
+  border-color: #246091;
 }
 a:hover {
   border: none;
   margin-bottom: 0;
+}
+a.alternative:link,
+a.alternative:visited {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.button {
+  font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.button:link,
+.button:visited {
+  border-bottom: none;
+  color: #ffffff;
 }
 .coverlayer {
   color: #000000;
@@ -165,12 +197,14 @@ a:hover {
 .secondary {
   color: #e3b299;
 }
-.info a:link, .info a:visited {
+.info a:link,
+.info a:visited {
   color: inherit;
   border: none;
   margin-bottom: 0;
 }
-.info a:hover, .info a:active {
+.info a:hover,
+.info a:active {
   border-bottom: 1px dotted #fff;
   margin-bottom: -1px;
 }
@@ -178,7 +212,8 @@ a:hover {
   border-bottom: none;
   margin-bottom: 0;
 }
-.zone-user a:link, .zone-user a:visited {
+.zone-user a:link,
+.zone-user a:visited {
   color: #ffffff;
   margin-right: 16px;
   border-color: #ffffff;
@@ -197,7 +232,8 @@ a:hover {
 .form-item .description {
   margin-bottom: 1em;
 }
-input[type=submit], button {
+input[type=submit],
+button {
   font-family: 'proxima-nova-n4', 'proxima-nova', sans-serif;
   font-weight: 300;
   font-size: 14px;

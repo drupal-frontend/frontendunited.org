@@ -17,9 +17,39 @@ img, video, object, embed {
 
 /* !----- / Styles ----- */
 .style-alternative {
-  background: @color-background-alternative;
+  //background: @color-background-alternative;
 }
 
+.imagelink {
+  display: inline-block;
+  
+  &:link,
+  &:visited {
+    border: none;
+    padding: 4px 4px 5px;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border: 4px solid @color-orange-light;
+    border-color: @color-orange-light-rgba;
+    background: @color-orange-light;
+    background: @color-orange-light-rgba;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    display: block;
+  }
+}
+
+.horizontal-list {
+  li {
+    display: inline;
+    display: inline-block;
+    margin-right: @default-spacing;
+  }
+}
 
 /* !----- / Sections ----- */
 .section-content {
@@ -29,7 +59,8 @@ img, video, object, embed {
   border-bottom: 1px solid @color-orange-light;
 }
 
-.section-footer {
+.section-footer,
+.zone-secondary {
   background: @color-orange-light;
   background: @color-orange-light-rgba;
 }
@@ -59,7 +90,8 @@ html .zone-postscript {
   padding-top: 20px;
 }
 
-.zone-postscript-wrapper {
+.zone-postscript-wrapper,
+.zone-sponsor-wrapper {
   border-bottom: 1px solid @color-orange-light;
 }
 
@@ -68,11 +100,15 @@ html .zone-postscript {
 }
 
 .front .zone-branding {
-  padding-top: 52px;
+  padding-top: 28px;
 }
 
 html .zone-footer {
   margin-top: 40px;
+}
+
+.zone-alternative {
+  background: @color-text-90;
 }
 
 // Move background image when toolbar is active
@@ -134,8 +170,8 @@ ul.menu {
 
 .tabs {
   ul.primary {
-    padding: 0 3px;
-    margin: 0;
+    padding: 0;
+    margin: 0 @default-spacing;
     overflow: hidden;
     border: none;
   
@@ -241,7 +277,7 @@ div.messages {
   a {
     display: block;
     float: left;
-    padding: @default-spacing;
+    padding: (@default-spacing/1.5) @default-spacing;
   
     &:link,
     &:visited {
@@ -272,9 +308,71 @@ div.messages {
 /* !----- / Logo ----- */
 .site-logo {
   float: right;
-  width: 32.9787234%; // 310/940px;
-  
+  width: 14.478723%;
+  padding: @default-spacing @default-spacing (@default-spacing/1.25);
   a {
     border: none;
+  }
+}
+
+/* !----- / Webform ----- */
+.webform-client-form {
+  margin: (2*@default-spacing) -@default-spacing @default-spacing;
+  padding: @default-spacing;
+  background: @color-orange-light;
+  background: @color-orange-light-rgba;
+  overflow: hidden;
+}
+
+/* !----- / Ticket link ----- */
+.ticket-link {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  a:link,
+  a:visited {
+    display: block;
+    padding-right: 128px;
+    background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
+    height: 60px;
+    line-height: 60px;
+    color: @color-text-primary;
+    border: none;
+  } 
+  a:hover,
+  a:active {
+    .opacity(80);
+  }
+}
+
+/* !----- / Sponsors ----- */
+
+.block-sponsor-lists-sponsor-premium {
+  padding: 8px 10px;
+  
+  a.imagelink {
+    float: left;
+  }
+  
+  p.inline-block {
+    display: inline-block;
+    line-height: 44px;
+    margin-bottom: 0;
+    padding: 8px 0 0 10px;
+  }
+}
+
+/* !----- / Schedule tables ----- */
+.schedule-table {
+  td {
+    width: 35%;
+    padding: 4px 1.5%;
+    border-bottom: 1px solid @color-orange-light;
+  }
+  td:first-child {
+    width: 20%;
+  }
+  td["colspan"="2"] {
+    width: 63%;
   }
 }

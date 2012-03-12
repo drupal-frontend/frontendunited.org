@@ -55,6 +55,7 @@ function fu2012_preprocess_field(&$vars) {
   // Add .text-content to selected fields
   switch ($vars['element']['#field_type']) {
     case 'text_long':
+    case 'text_with_summary':
        $vars['classes_array'][] = 'text-content';
       break;
 
@@ -62,6 +63,40 @@ function fu2012_preprocess_field(&$vars) {
       break;
   }
 }
+
+/**
+ * Implements hook_process_region().
+ */
+function fu2012_alpha_process_region(&$vars) {
+  if (in_array($vars['elements']['#region'], array('branding','sponsor_premium'))) {
+    $theme = alpha_get_theme();
+    
+    switch ($vars['elements']['#region']) {
+      case 'branding':
+        $vars['site_name'] = $theme->page['site_name'];
+        $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('rel' => 'home', 'title' => t('Home')), 'html' => TRUE));
+        $vars['site_slogan'] = $theme->page['site_slogan'];      
+        $vars['site_name_hidden'] = $theme->page['site_name_hidden'];
+        $vars['site_slogan_hidden'] = $theme->page['site_slogan_hidden'];
+        break;    
+    }
+  }
+}
+
+/**
+ * Implements hook_process_zone().
+ */
+function fu2012_alpha_process_zone(&$vars) {
+  $theme = alpha_get_theme();
+  
+  if ($vars['elements']['#zone'] == 'sponsor_premium') {
+    $vars['site_name'] = $theme->page['site_name'];
+    $vars['logo'] = $theme->page['logo'];
+    $vars['logo_img'] = $vars['logo'] ? '<img src="' . $vars['logo'] . '" alt="' . $vars['site_name'] . '" id="logo" />' : '';
+    $vars['linked_logo_img'] = $vars['logo'] ? l($vars['logo_img'], '<front>', array('attributes' => array('rel' => 'home', 'title' => t($vars['site_name'])), 'html' => TRUE)) : '';
+  }
+}
+
 
 /**
  * Implements template_menu_link().
