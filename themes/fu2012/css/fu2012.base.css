@@ -276,6 +276,7 @@ video,
 object,
 embed {
   max-width: 100%;
+  height: auto;
 }
 /* !----- / Styles ----- */
 .imagelink {
