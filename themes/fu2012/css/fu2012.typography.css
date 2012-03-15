@@ -173,6 +173,7 @@ a.alternative:visited {
 .button:visited {
   border-bottom: none;
   color: #ffffff;
+  line-height: 33px;
 }
 .coverlayer {
   color: #000000;
