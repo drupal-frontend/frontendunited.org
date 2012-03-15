@@ -565,6 +565,11 @@ div.messages {
   right: 0;
   top: -5px;
 }
+@media screen and (max-width: 600px) {
+	.ticket-link { 
+		position: relative;
+	}
+}
 .ticket-link a:link,
 .ticket-link a:visited {
   display: block;
