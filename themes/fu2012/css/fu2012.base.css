@@ -595,6 +595,13 @@ div.messages {
   margin-bottom: 0;
   padding: 8px 0 0 10px;
 }
+.multiple-sponsors {
+  overflow: hidden;
+}
+.multiple-sponsors .block {
+  float: left;
+  margin-right: 16px;
+}
 /* !----- / Schedule tables ----- */
 .schedule-table td {
   width: 35%;
