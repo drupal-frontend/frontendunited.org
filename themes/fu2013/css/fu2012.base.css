@@ -2,6 +2,18 @@
 /* Mixins.less
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
+/* !----- / Variables / ----- */
+/* Variables.less
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+img,
+video,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+/* !----- / FORM STYLES ----- */
 input[type=text],
 input[type=email],
 input[type=password],
@@ -51,10 +63,6 @@ input[type=file] {
   line-height: initial;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  -ms-box-shadow: none;
   box-shadow: none;
 }
 input[type=button],
@@ -139,8 +147,6 @@ textarea {
   line-height: 1;
   color: #404040;
   *padding: 0 0 5px 145px;
-  /* IE6-7 */
-
   *line-height: 1.5;
   /* IE6-7 */
 
@@ -200,10 +206,6 @@ textarea {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -ms-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   cursor: not-allowed;
 }
 :-moz-placeholder {
@@ -228,10 +230,6 @@ textarea {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 input:focus,
 textarea:focus {
@@ -240,20 +238,12 @@ textarea:focus {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 input[type=file]:focus,
 input[type=checkbox]:focus,
 select:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  -ms-box-shadow: none;
   box-shadow: none;
   outline: 1px dotted #666;
 }
@@ -267,18 +257,7 @@ textarea[readonly] {
   border-color: #ddd;
   cursor: not-allowed;
 }
-/* !----- / Variables / ----- */
-/* Variables.less
- * Variables to customize the look and feel of Bootstrap
- * ----------------------------------------------------- */
-img,
-video,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
-/* !----- / Styles ----- */
+/* !----- / GENERIC STYLES ----- */
 .imagelink {
   display: inline-block;
 }
@@ -406,8 +385,6 @@ ul.menu {
 .tabs ul.primary li {
   display: block;
   float: left;
-  /* LTR */
-
   vertical-align: bottom;
   margin: 0 5px 0 0;
   /* LTR */
@@ -425,13 +402,6 @@ ul.menu {
 
   padding: 0 10px 3px;
   margin: 0;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -khtml-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
   -khtml-border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -475,13 +445,6 @@ ul.menu {
 .tabs ul.secondary li a.active {
   background: #f2f2f2;
   border-bottom: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;

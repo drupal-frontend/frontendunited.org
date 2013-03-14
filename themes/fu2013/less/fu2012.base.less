@@ -3,8 +3,6 @@
 
 /* !----- / external libraries ----- */
 @import 'mixins.less';
-@import 'library.general.less';
-@import 'library.minimal.forms.less';
 
 /* !----- / Variables / ----- */
 @import 'variables.less';
@@ -16,14 +14,280 @@ img, video, object, embed {
   height: auto;
 }
 
-/* !----- / Styles ----- */
+/* !----- / FORM STYLES ----- */
+// ----- / Variables / -----
+@libmin-form-color-border : #D7D8D9;
+@libmin-form-color-back : #fff;
+@libmin-form-color-button : #E64C00;
+@libmin-form-color-text : #666;
+@libmin-form-padding: 8px 8px;
+
+
+// ----- / Basic form elements / -----
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  border: 1px solid @libmin-form-color-border;
+  background: @libmin-form-color-back;
+  padding: @libmin-form-padding;
+  line-height: 1;
+  color: @libmin-form-color-text;
+  margin: 0;
+  -webkit-appearance:none;
+}
+
+input[type=submit],
+.button {
+  border: none;
+  background: @libmin-form-color-button;
+  padding: 8px 16px;
+  color: #fff;
+  margin: 0;
+  -webkit-appearance:none;
+}
+
+input[type=submit]:hover,
+.button:hover {
+  cursor: pointer;
+  background: #F28B00;
+}
+
+
+// remove padding from select
+select {
+  padding: initial;
+}
+
+// mini reset for non-html5 file types
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0; /* IE6-7 */
+  line-height: normal;
+  border: none;
+  -webkit-transform-style: flat;
+}
+
+input[type=file] {
+  padding: initial;
+  border: initial;
+  line-height: initial;
+  .box-shadow(none);
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  width: auto;
+  height: auto;
+}
+
+select,
+input[type=file] {
+  height: @baseline * 1.5; // In IE7, the height of the select element cannot be changed by height, only font-size
+  *height: auto; // Reset for IE7
+  line-height: @baseline * 1.5;
+  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
+}
+
+// Make multiple select elements height not fixed
+select[multiple] {
+  height: inherit;
+  background-color: @white; // Fixes Chromium bug of unreadable items
+}
+
+textarea {
+  height: auto;
+}
+
+.page {
+  // Parent element that clears floats and wraps labels and fields together
+  form  {
+    .clearfix {
+      margin-bottom: @default-spacing;
+    }
+    // Shift over the inside div/input to align all label's relevant content
+    .form-text,
+    .form-textarea-wrapper,
+    .description,
+    .form-actions,
+    .item-list,
+    .form-file,
+    .webform-container-inline {
+      margin-left: 150px;
+      display: block;
+    }
+    // Float labels left
+    label {
+      padding-top: 6px;
+      float: left;
+      width: 130px;
+      text-align: right;
+    }
+    .webform-component-radios,
+    .webform-component-checkboxes {
+      margin-left: 150px;
+      label {
+        float: none;
+        width: auto;
+        margin-left: @default-spacing/2;
+        font-weight: normal;
+        display: inline;
+      }
+      .description {
+        margin-left: 0;
+      }
+      .form-item {
+        margin: @default-spacing/2 0;
+      }
+    }
+    .container-inline {
+      .form-text,
+      .form-textarea-wrapper,
+      .description,
+      .form-actions,
+      .item-list,
+      .form-file,
+      .webform-container-inline {
+        margin-left: 0;
+        display: inline-block;
+      }
+    }
+  }
+  // Groups of fields with labels on top (legends)
+  fieldset {
+    margin-bottom: @baseline;
+    padding-top: @baseline;
+    legend {
+      display: block;
+      padding-left: 150px;
+      font-size: @basefont * 1.5;
+      line-height: 1;
+      color: @grayDark;
+      *padding: 0 0 5px 145px; /* IE6-7 */
+      *line-height: 1.5; /* IE6-7 */
+    }
+  }
+
+  // Stacked forms
+  .form-stacked {
+    fieldset {
+      padding-top: @baseline / 2;
+    }
+    legend {
+      padding-left: 0;
+    }
+    label {
+      display: block;
+      float: none;
+      width: auto;
+      font-weight: bold;
+      text-align: left;
+      line-height: 20px;
+      padding-top: 0;
+    }
+    .clearfix {
+      margin-bottom: @baseline / 2;
+      div.input {
+        margin-left: 0;
+      }
+    }
+    .inputs-list {
+      margin-bottom: 0;
+      li {
+        padding-top: 0;
+        label {
+          font-weight: normal;
+          padding-top: 0;
+        }
+      }
+    }
+    .form-text,
+    .form-textarea-wrapper,
+    .description,
+    .form-actions,
+    .item-list,
+    .form-file,
+    .webform-container-inline {
+      margin-left: 0;
+    }
+    .webform-component-radios,
+    .webform-component-checkboxes {
+      margin-left: 0;
+    }
+  }
+  .webform-component,
+  .form-item {
+    margin-bottom: @default-spacing;
+  }
+
+
+}
+
+// For text that needs to appear as an input but should not be an input
+.uneditable-input {
+  background-color: @white;
+  display: block;
+  border-color: #eee;
+  .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+  cursor: not-allowed;
+}
+
+// Placeholder text gets special styles; can't be bundled together though for some reason
+:-moz-placeholder {
+  color: @grayLight;
+}
+::-webkit-input-placeholder {
+  color: @grayLight;
+}
+
+// Focus states
+input,
+textarea {
+  @transition: border linear .2s, box-shadow linear .2s;
+  .transition(@transition);
+  .box-shadow(inset 0 1px 3px rgba(0,0,0,.1));
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-color: rgba(82,168,236,.8);
+  @shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+  .box-shadow(@shadow);
+}
+input[type=file]:focus,
+input[type=checkbox]:focus,
+select:focus {
+  .box-shadow(none); // override for file inputs
+  outline: 1px dotted #666; // Selet elements don't get box-shadow styles, so instead we do outline
+}
+
+// Disabled and read-only inputs
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+/* !----- / GENERIC STYLES ----- */
 .style-alternative {
   //background: @color-background-alternative;
 }
 
 .imagelink {
   display: inline-block;
-  
+
   &:link,
   &:visited {
     border: none;
@@ -162,8 +426,8 @@ ul.menu {
   .collapsed {
     display: inline-block;
   }
-} 
- 
+}
+
 .expanded,
 .collapsed,
 .leaf {
@@ -184,7 +448,7 @@ ul.menu {
     margin: 0 @default-spacing;
     overflow: hidden;
     border: none;
-  
+
     li {
       display: block;
       float: left; /* LTR */
@@ -208,26 +472,26 @@ ul.menu {
       a:visited {
         border-bottom: none;
       }
-      
+
       a:hover {
         text-decoration: underline;
       }
-  
+
       &.active a {
         background-color: #ffffff;
         border-bottom: 1px solid #ffffff;
       }
     } // .tabs ul.primary li
   } // .tabs ul.primary
-  
+
   ul.secondary {
     border-bottom: none;
     padding: 0.5em 0;
-  
+
     li {
       display: block;
       float: left; /* LTR */
-    
+
       &:last-child {
         border-right: none; /* LTR */
       }
@@ -243,9 +507,9 @@ ul.menu {
         .border-radius(5px);
       }
     } //.tabs ul.secondary li
-  } //.tabs ul.secondary  
-} //.tabs   
-  
+  } //.tabs ul.secondary
+} //.tabs
+
 ul.action-links {
   list-style: none;
   margin: 5px;
@@ -283,21 +547,21 @@ div.messages {
 /* !----- / Main menu ----- */
 .topbar {
   background: #fff;
-  
+
   a {
     display: block;
     float: left;
     padding: (@default-spacing/1.5) @default-spacing;
-  
+
     &:link,
     &:visited {
       color: #000;
     }
-  
+
     &.active {
       background: @color-negative;
       color: @color-text-primary;
-      
+
       &[href^='/#'] {
         background: #fff;
         color: #000;
@@ -311,7 +575,7 @@ div.messages {
       background: @color-background;
       color: @color-text-primary;
     }
-  }  
+  }
 }
 
 
@@ -348,7 +612,7 @@ div.messages {
     line-height: 60px;
     color: @color-text-primary;
     border: none;
-  } 
+  }
   a:hover,
   a:active {
     .opacity(80);
@@ -359,11 +623,11 @@ div.messages {
 
 .block-sponsor-lists-sponsor-premium {
   padding: 8px 10px;
-  
+
   a.imagelink {
     float: left;
   }
-  
+
   p.inline-block {
     display: inline-block;
     line-height: 44px;
@@ -374,7 +638,7 @@ div.messages {
 
 .multiple-sponsors {
   overflow: hidden;
-  
+
   .block {
     float: left;
     margin-right: @default-spacing;

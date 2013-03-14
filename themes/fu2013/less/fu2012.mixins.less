@@ -16,3 +16,11 @@
   -ms-box-shadow: @arguments;
   box-shadow: @arguments;
 }
+
+.transition (@param) {
+  -webkit-transition: @param 0.3s ease-in;
+  -moz-transition: @param 0.3s ease-in;
+  -o-transition: @param 0.3s ease-in;
+  -ms-transition: @param 0.3s ease-in;
+  transition: @param 0.3s ease-in;
+}
