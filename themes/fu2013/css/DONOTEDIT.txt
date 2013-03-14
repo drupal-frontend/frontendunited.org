@@ -1,0 +1,4 @@
+## Do not edit css-files directly. 
+## Any changes here will be overwritten.
+
+## Edit the less-files in itkcore/less/ and compile them to css
