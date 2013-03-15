@@ -320,22 +320,19 @@ textarea[readonly] {
 .section-content {
   padding-bottom: 2 * @default-spacing;
   padding-top: 2 * @default-spacing;
-  border-top: 1px solid @color-orange-light;
-  border-bottom: 1px solid @color-orange-light;
 }
 
 .section-footer,
 .zone-secondary {
-  background: @color-orange-light;
-  background: @color-orange-light-rgba;
-}
-
-.front .section-footer {
-  background: transparent;
+  background: @color-gray-light;
 }
 
 
 /* !----- / Zones ----- */
+
+body .zone {
+  max-width: 920px;
+}
 .style-branded {
   background-image: url(../images/lego-white.png);
   background-position: 95% 300px;
@@ -362,19 +359,46 @@ html .zone-postscript {
 
 .zone-postscript-wrapper,
 .zone-sponsor-wrapper {
+  background-color: @color-orange-light;
   border-bottom: 1px solid @color-orange-light;
+  color: @color-text-negative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  background: #fff url(../images/brickwall.jpg) 185% -180px repeat-x;
+}
+.section-header {
+  min-height: 250px;
+}
+
+.front {
+  .page {
+    background-position: 51% 45px;
+  }
+  .section-header {
+    background: transparent url(../images/graffiti.png) 825px 133px no-repeat;
+    min-height: 430px;
+  }
 }
 
 .zone-branding {
-  padding-top: 22px;
+  background: url(../images/design-code-share.png) 670px 49px no-repeat;
+  padding: 40px 0 0 0;
 }
 
 .front .zone-branding {
-  padding-top: 28px;
+  background-position: 670px 14px;
+  padding: 112px 0 0 0;
+}
+
+#region-branding {
+  margin: 0;
 }
 
 html .zone-footer {
-  margin-top: 40px;
+  background-color: @color-gray-med;
+  margin: 40px auto;
 }
 
 .zone-alternative {
@@ -417,6 +441,11 @@ html .zone-footer {
 ul.menu {
   border: none;
   list-style: none;
+}
+
+// Navigation
+.navigation li a {
+  margin-right: 1px;
 }
 
 // Horizontal menus
@@ -547,11 +576,13 @@ div.messages {
 /* !----- / Main menu ----- */
 .topbar {
   background: #fff;
+  box-shadow: 0 0 12px #999;
 
   a {
     display: block;
     float: left;
     padding: (@default-spacing/1.5) @default-spacing;
+    .transition (background-color);
 
     &:link,
     &:visited {
@@ -560,32 +591,22 @@ div.messages {
 
     &.active {
       background: @color-negative;
-      color: @color-text-primary;
+      color: @color-text-negative;
+      -webkit-font-smoothing: antialiased;
 
       &[href^='/#'] {
         background: #fff;
         color: #000;
       }
       &:hover {
-        background: @color-background;
-        color: @color-text-primary;
+        color: @color-text-negative;
       }
     }
     &:hover {
-      background: @color-background;
-      color: @color-text-primary;
+      background: @color-negative;
+      color: @color-text-negative;
+      -webkit-font-smoothing: antialiased;
     }
-  }
-}
-
-
-/* !----- / Logo ----- */
-.site-logo {
-  float: right;
-  width: 14.478723%;
-  padding: @default-spacing @default-spacing (@default-spacing/1.25);
-  a {
-    border: none;
   }
 }
 
@@ -650,7 +671,7 @@ div.messages {
   td {
     width: 35%;
     padding: 4px 1.5%;
-    border-bottom: 1px solid @color-orange-light;
+    border-bottom: 1px solid @color-gray-med;
   }
   td:first-child {
     width: 20%;

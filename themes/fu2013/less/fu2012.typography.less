@@ -8,7 +8,7 @@ body {
   font-weight: @font-std-wgt;
   background: @color-background;
   color: @color-text-primary;
-  line-height: 1.4em;
+  line-height: 1.5;
   font-size: @font-size-base;
 }
 
@@ -16,8 +16,8 @@ body {
 .no-js {
   body        { font-size: @font-size-small; }
   .front .site-name  { font-size: 4.4em; }
-  .site-name  { 
-    font-size: 3.1em; 
+  .site-name  {
+    font-size: 3.1em;
     span {
       font-size: 24px;
     }
@@ -45,8 +45,6 @@ input, textarea {
 // Site name
 .site-name {
   font-family: @font-hvy-fam;
-  font-size: 4em;
-  line-height: 1em;
   padding: 0 @default-spacing;
   text-decoration: none;
 
@@ -55,21 +53,28 @@ input, textarea {
     color: @color-text-primary;
     border: none;
   }
-  
+
   h1 {
     font-weight: @font-hvy-wgt;
+    margin-left: -8px;
+    img {
+      width: 310px;
+    }
   }
-  
+
   h2 {
+    font-size: 1.3em;
     font-weight: @font-hvy-wgt;
-    margin: 0;
-  }  
+    line-height: 1.3;
+    margin: 10px 0 0;
+    text-transform: uppercase;
+  }
 
   strong {
     color: @color-negative;
     font-weight: @font-hvy-wgt;
   }
-  
+
   span {
     .block-title;
     display: block;
@@ -77,12 +82,16 @@ input, textarea {
     color: @color-text-80;
   }
 }
-
 .front .site-name {
-  font-size: 5.428571429em;
-  
-    span {
-    margin-top: 1.5 * @default-spacing;
+  h1 {
+    margin-left: -8px;
+    img {
+      width: auto;
+    }
+  }
+  h2 {
+    font-size: 2.125em;
+    margin: 40px 0 0 8px;
   }
 }
 
@@ -98,14 +107,14 @@ input, textarea {
 
 // Block titles
 .block-title {
-  font-size: @font-size-h2;
+  font-size: @font-size-h3;
   font-family: @font-hvy-fam;
   font-weight: @font-hvy-wgt;
   text-transform: uppercase;
   letter-spacing: 0.03125em; //1/32px;
   line-height: 1em;
   margin-bottom: 0.8em;
-  
+  padding: 10px 0;
 }
 
 // Content headings H2
@@ -128,6 +137,10 @@ input, textarea {
   font-size: @font-size-h3;
 }
 
+// Navigation
+.navigation {
+  font-family: @font-lgt-fam;
+}
 
 // Homepage callout
 .callout {
@@ -139,7 +152,7 @@ input, textarea {
   padding: 0 @default-spacing 0;
   width: 54.333%;
   margin-bottom: 2em;
-  
+
   em {
     font-style: normal;
     color: @color-negative;
@@ -154,13 +167,13 @@ input, textarea {
     list-style: square;
     margin-bottom: @parapgraph-space;
   }
-  
+
   ol {
     margin-left: 20px;
     list-style: decimal;
     margin-bottom: @parapgraph-space;
   }
-} 
+}
 
 blockquote {
 }
@@ -195,25 +208,26 @@ a {
 }
 
 .button {
-  font-family: @font-std-fam;
+  font-family: @font-lgt-fam;
   font-weight: @font-std-wgt;
   font-size: @font-size-base;
   text-transform: uppercase;
+  .transition (background-color);
   &:link,
   &:visited {
     border-bottom: none;
-    color: @color-text-primary
+    color: @color-text-negative;
   }
 }
 
 // Colors on color overlays
 .coverlayer {
   color: @color-negative;
-  
+
   .block-title {
     font-size: @font-size-h2 * 1.5;
   }
-  
+
   a {
   &:link {
     color: @color-negative;
@@ -230,7 +244,7 @@ a {
 .zone-alternative,
 .zone-negative {
   color: @color-negative;
-  
+
   .block-title {
     color: @color-negative;
   }
@@ -241,7 +255,7 @@ a {
     color: @color-background;
     line-height: 1.4em;
     font-size: @font-size-base;
-    font-weight: 600; 
+    font-weight: 600;
     font-family: @font-std-fam;
     text-transform: none;
   }
@@ -270,7 +284,7 @@ a {
 .region-menu a {
   border-bottom: none;
   margin-bottom: 0;
-}  
+}
 
 // Menus
 .zone-user {
@@ -291,7 +305,7 @@ a {
 // Forms
 .form-item {
   margin: 0.5em 0;
-  
+
   label {
     width: 130px;
     display: inline-block;
@@ -300,7 +314,7 @@ a {
   .description {
     .basetext;
   }
-  
+
 }
 
 input[type=submit],
@@ -317,7 +331,7 @@ button {
 .block-mailchimp-lists {
   .block-title {
     background: transparent url(../images/fu2012-sprites.png) no-repeat 0px -772px;
-    padding-left: 50px;
+    padding-left: 60px;
   }
   .mailchimp-newsletter-wrapper {
     margin-bottom: 1em;
@@ -327,7 +341,7 @@ button {
 // Twitter block
 .block-block-2 {
   .block-title {
-     background: transparent url(../images/fu2012-sprites.png) no-repeat -54px -729px;
-     padding-left: 50px;
+     background: transparent url(../images/twitter.png) no-repeat 0 0;
+     padding-left: 60px;
   }
 }

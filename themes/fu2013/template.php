@@ -6,10 +6,10 @@
 
 /**
  * Implements hook_preprocess_node().
- * 
+ *
  * Create helper function to target node of specific content types.
  */
-function fu2012_preprocess_node(&$vars, $hook) {
+function fu2013_preprocess_node(&$vars, $hook) {
   $function = __FUNCTION__ . '_' . $vars['type'];
   if (function_exists($function)) {
     $function($vars, $hook);
@@ -20,7 +20,7 @@ function fu2012_preprocess_node(&$vars, $hook) {
  * Implements template_preprocess_block().
  * Create helper function to target blocks from specific modules.
  */
-function fu2012_preprocess_block(&$vars, $hook) {
+function fu2013_preprocess_block(&$vars, $hook) {
   $function = __FUNCTION__ . '_' . $vars['elements']['#block']->module;
   if (function_exists($function)) {
     $function($vars, $hook);
@@ -31,7 +31,7 @@ function fu2012_preprocess_block(&$vars, $hook) {
  * Implements template_preprocess_page().
  * Insert Typekit code in $script if enabled in theme settings.
  */
-function fu2012_preprocess_page(&$vars) {
+function fu2013_preprocess_page(&$vars) {
   // Check if typekit is enables and an ID has been defined.
   if (theme_get_setting('typekit_kit_id') != '' && theme_get_setting('typekit_enable') == '1') {
     // Create url to js
@@ -51,7 +51,7 @@ function fu2012_preprocess_page(&$vars) {
  *
  * Adds consistent classes to field wrappers for styling purposes.
  */
-function fu2012_preprocess_field(&$vars) {
+function fu2013_preprocess_field(&$vars) {
   // Add .text-content to selected fields
   switch ($vars['element']['#field_type']) {
     case 'text_long':
@@ -67,18 +67,18 @@ function fu2012_preprocess_field(&$vars) {
 /**
  * Implements hook_process_region().
  */
-function fu2012_alpha_process_region(&$vars) {
+function fu2013_alpha_process_region(&$vars) {
   if (in_array($vars['elements']['#region'], array('branding','sponsor_premium'))) {
     $theme = alpha_get_theme();
-    
+
     switch ($vars['elements']['#region']) {
       case 'branding':
         $vars['site_name'] = $theme->page['site_name'];
         $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('rel' => 'home', 'title' => t('Home')), 'html' => TRUE));
-        $vars['site_slogan'] = $theme->page['site_slogan'];      
+        $vars['site_slogan'] = $theme->page['site_slogan'];
         $vars['site_name_hidden'] = $theme->page['site_name_hidden'];
         $vars['site_slogan_hidden'] = $theme->page['site_slogan_hidden'];
-        break;    
+        break;
     }
   }
 }
@@ -86,9 +86,9 @@ function fu2012_alpha_process_region(&$vars) {
 /**
  * Implements hook_process_zone().
  */
-function fu2012_alpha_process_zone(&$vars) {
+function fu2013_alpha_process_zone(&$vars) {
   $theme = alpha_get_theme();
-  
+
   if ($vars['elements']['#zone'] == 'sponsor_premium') {
     $vars['site_name'] = $theme->page['site_name'];
     $vars['logo'] = $theme->page['logo'];
@@ -103,7 +103,7 @@ function fu2012_alpha_process_zone(&$vars) {
  *
  * Adds classes based on menu level to nested menus.
  */
-function fu2012_menu_link(array $variables) {
+function fu2013_menu_link(array $variables) {
 
   $element = $variables['element'];
   $sub_menu = '';
@@ -127,7 +127,11 @@ function fu2012_menu_link(array $variables) {
  * Implements hook_form_FORMID_alter().
  * Removes duplicate label.
  */
-function fu2012_form_mailchimp_lists_user_subscribe_form_1_alter(&$form) {
+function fu2013_form_mailchimp_lists_user_subscribe_form_1_alter(&$form) {
   // Label duplicates block title, remove it.
   unset($form['mailchimp_lists']['mailchimp_1']['title']['#title']);
+}
+
+function fu2013_preprocess_html(&$variables) {
+drupal_add_css('http://fonts.googleapis.com/css?family=Maven+Pro:400,900', array('type' => 'external'));
 }

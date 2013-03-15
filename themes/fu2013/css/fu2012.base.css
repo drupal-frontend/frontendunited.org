@@ -147,6 +147,8 @@ textarea {
   line-height: 1;
   color: #404040;
   *padding: 0 0 5px 145px;
+  /* IE6-7 */
+
   *line-height: 1.5;
   /* IE6-7 */
 
@@ -222,11 +224,11 @@ textarea {
   -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s 0.3s ease-in;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s 0.3s ease-in;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s 0.3s ease-in;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s 0.3s ease-in;
-  transition: border linear 0.2s, box-shadow linear 0.2s 0.3s ease-in;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s 0.1s ease-in;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s 0.1s ease-in;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s 0.1s ease-in;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s 0.1s ease-in;
+  transition: border linear 0.2s, box-shadow linear 0.2s 0.1s ease-in;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -269,10 +271,10 @@ textarea[readonly] {
 .imagelink:hover,
 .imagelink:focus,
 .imagelink:active {
-  border: 4px solid #d2845c;
-  border-color: rgba(210, 132, 92, 0.5);
-  background: #d2845c;
-  background: rgba(210, 132, 92, 0.5);
+  border: 4px solid #ec5c1d;
+  border-color: rgba(236, 92, 29, 0.5);
+  background: #ec5c1d;
+  background: rgba(236, 92, 29, 0.5);
   margin: 0;
   padding: 0;
 }
@@ -288,18 +290,15 @@ textarea[readonly] {
 .section-content {
   padding-bottom: 32px;
   padding-top: 32px;
-  border-top: 1px solid #d2845c;
-  border-bottom: 1px solid #d2845c;
 }
 .section-footer,
 .zone-secondary {
-  background: #d2845c;
-  background: rgba(210, 132, 92, 0.5);
-}
-.front .section-footer {
-  background: transparent;
+  background: #eaeaeb;
 }
 /* !----- / Zones ----- */
+body .zone {
+  max-width: 920px;
+}
 .style-branded {
   background-image: url(../images/lego-white.png);
   background-position: 95% 300px;
@@ -321,22 +320,44 @@ html .zone-postscript {
 }
 .zone-postscript-wrapper,
 .zone-sponsor-wrapper {
-  border-bottom: 1px solid #d2845c;
+  background-color: #ec5c1d;
+  border-bottom: 1px solid #ec5c1d;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  background: #ffffff url(../images/brickwall.jpg) 185% -180px repeat-x;
+}
+.section-header {
+  min-height: 250px;
+}
+.front .page {
+  background-position: 51% 45px;
+}
+.front .section-header {
+  background: transparent url(../images/graffiti.png) 825px 133px no-repeat;
+  min-height: 430px;
 }
 .zone-branding {
-  padding-top: 22px;
+  background: url(../images/design-code-share.png) 670px 49px no-repeat;
+  padding: 40px 0 0 0;
 }
 .front .zone-branding {
-  padding-top: 28px;
+  background-position: 670px 14px;
+  padding: 112px 0 0 0;
+}
+#region-branding {
+  margin: 0;
 }
 html .zone-footer {
-  margin-top: 40px;
+  background-color: #d9dada;
+  margin: 40px auto;
 }
 .zone-alternative {
   background-color: #f0d4c6;
 }
 .zone-negative {
-  background-color: #ffffff;
+  background-color: #3c3c3b;
 }
 .toolbar.front .style-branded,
 .toolbar.front .style-branded-alt {
@@ -352,14 +373,17 @@ html .zone-footer {
   padding: 16px;
 }
 .block-secondary {
-  background: #d2845c;
-  background: rgba(210, 132, 92, 0.5);
+  background: #ec5c1d;
+  background: rgba(236, 92, 29, 0.5);
   overflow: hidden;
 }
 /* !----- / Menus ----- */
 ul.menu {
   border: none;
   list-style: none;
+}
+.navigation li a {
+  margin-right: 1px;
 }
 .horizontal .leaf,
 .horizontal .expanded,
@@ -385,6 +409,8 @@ ul.menu {
 .tabs ul.primary li {
   display: block;
   float: left;
+  /* LTR */
+
   vertical-align: bottom;
   margin: 0 5px 0 0;
   /* LTR */
@@ -402,6 +428,9 @@ ul.menu {
 
   padding: 0 10px 3px;
   margin: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   -khtml-border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -445,6 +474,9 @@ ul.menu {
 .tabs ul.secondary li a.active {
   background: #f2f2f2;
   border-bottom: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -480,47 +512,51 @@ div.messages {
 /* !----- / Main menu ----- */
 .topbar {
   background: #fff;
+  box-shadow: 0 0 12px #999;
 }
 .topbar a {
   display: block;
   float: left;
   padding: 10.666666666666666px 16px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: background-color;
+  -moz-transition: background-color;
+  -ms-transition: background-color;
+  -o-transition: background-color;
+  transition: background-color;
+  -webkit-transition: background-color 0.1s ease-in;
+  -moz-transition: background-color 0.1s ease-in;
+  -o-transition: background-color 0.1s ease-in;
+  -ms-transition: background-color 0.1s ease-in;
+  transition: background-color 0.1s ease-in;
 }
 .topbar a:link,
 .topbar a:visited {
   color: #000;
 }
 .topbar a.active {
-  background: #000000;
+  background: #3c3c3b;
   color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 .topbar a.active[href^='/#'] {
   background: #fff;
   color: #000;
 }
 .topbar a.active:hover {
-  background: #c76533;
   color: #ffffff;
 }
 .topbar a:hover {
-  background: #c76533;
+  background: #3c3c3b;
   color: #ffffff;
-}
-/* !----- / Logo ----- */
-.site-logo {
-  float: right;
-  width: 14.478723%;
-  padding: 16px 16px 12.8px;
-}
-.site-logo a {
-  border: none;
+  -webkit-font-smoothing: antialiased;
 }
 /* !----- / Webform ----- */
 .webform-client-form {
   margin: 32px -16px 16px;
   padding: 16px;
-  background: #d2845c;
-  background: rgba(210, 132, 92, 0.5);
+  background: #ec5c1d;
+  background: rgba(236, 92, 29, 0.5);
   overflow: hidden;
 }
 /* !----- / Ticket link ----- */
@@ -536,7 +572,7 @@ div.messages {
   background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
   height: 60px;
   line-height: 60px;
-  color: #ffffff;
+  color: #3c3c3b;
   border: none;
 }
 .ticket-link a:hover,
@@ -570,7 +606,7 @@ div.messages {
 .schedule-table td {
   width: 35%;
   padding: 4px 1.5%;
-  border-bottom: 1px solid #d2845c;
+  border-bottom: 1px solid #d9dada;
 }
 .schedule-table td:first-child {
   width: 20%;
