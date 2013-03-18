@@ -44,9 +44,11 @@ input, textarea {
 
 // Site name
 .site-name {
+  float: left;
   font-family: @font-hvy-fam;
   padding: 0 @default-spacing;
   text-decoration: none;
+  width: 60%;
 
   a:link,
   a:visited {
@@ -121,9 +123,6 @@ input, textarea {
 .text-content h2 {
   .block-title;
   margin: 0.8em 0 0.4em;
-  //font-family: @font-std-fam;
-  //.bold;
-  //font-size: @font-size-h3;
 
   &:first-child {
     margin-top: 0;
@@ -144,14 +143,14 @@ input, textarea {
 
 // Homepage callout
 .callout {
-  color: @color-text-90;
-  font-family: @font-lgt-fam;
+  float: right;
+  font-family: @font-std-fam;
   font-size: 20px;
   font-weight: @font-lgt-wgt;
   line-height: 1.3em;
-  padding: 0 @default-spacing 0;
-  width: 54.333%;
-  margin-bottom: 2em;
+  padding: 12px @default-spacing 0;
+  text-align: center;
+  width: 30%;
 
   em {
     font-style: normal;
@@ -225,7 +224,7 @@ a {
   color: @color-negative;
 
   .block-title {
-    font-size: @font-size-h2 * 1.5;
+    font-size: @font-size-h2 * 1.75;
   }
 
   a {

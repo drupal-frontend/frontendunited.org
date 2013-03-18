@@ -30,6 +30,7 @@ input[type=submit],
 .button {
   border: none;
   background: #e64c00;
+  font-family: "Maven Pro", Helvetica, Arial, sans-serif;
   padding: 8px 16px;
   color: #fff;
   margin: 0;
@@ -97,18 +98,18 @@ textarea {
 .page form .item-list,
 .page form .form-file,
 .page form .webform-container-inline {
-  margin-left: 150px;
+  margin-left: 130px;
   display: block;
 }
 .page form label {
   padding-top: 6px;
   float: left;
-  width: 130px;
+  width: 110px;
   text-align: right;
 }
 .page form .webform-component-radios,
 .page form .webform-component-checkboxes {
-  margin-left: 150px;
+  margin-left: 130px;
 }
 .page form .webform-component-radios label,
 .page form .webform-component-checkboxes label {
@@ -142,7 +143,7 @@ textarea {
 }
 .page fieldset legend {
   display: block;
-  padding-left: 150px;
+  padding-left: 130px;
   font-size: 19.5px;
   line-height: 1;
   color: #404040;
@@ -271,10 +272,10 @@ textarea[readonly] {
 .imagelink:hover,
 .imagelink:focus,
 .imagelink:active {
-  border: 4px solid #ec5c1d;
-  border-color: rgba(236, 92, 29, 0.5);
-  background: #ec5c1d;
-  background: rgba(236, 92, 29, 0.5);
+  border: 4px solid #f2eeed;
+  border-color: rgba(231, 223, 222, 0.5);
+  background: #f2eeed;
+  background: rgba(231, 223, 222, 0.5);
   margin: 0;
   padding: 0;
 }
@@ -321,7 +322,7 @@ html .zone-postscript {
 .zone-postscript-wrapper,
 .zone-sponsor-wrapper {
   background-color: #ec5c1d;
-  border-bottom: 1px solid #ec5c1d;
+  border-bottom: 1px solid #f2eeed;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
@@ -336,14 +337,14 @@ html .zone-postscript {
 }
 .front .section-header {
   background: transparent url(../images/graffiti.png) 825px 133px no-repeat;
-  min-height: 430px;
+  min-height: 480px;
 }
 .zone-branding {
-  background: url(../images/design-code-share.png) 670px 49px no-repeat;
+  background: url(../images/design-code-share.png) 648px 49px no-repeat;
   padding: 40px 0 0 0;
 }
 .front .zone-branding {
-  background-position: 670px 14px;
+  background-position: 648px 14px;
   padding: 112px 0 0 0;
 }
 #region-branding {
@@ -373,8 +374,8 @@ html .zone-footer {
   padding: 16px;
 }
 .block-secondary {
-  background: #ec5c1d;
-  background: rgba(236, 92, 29, 0.5);
+  background: #f2eeed;
+  background: rgba(231, 223, 222, 0.5);
   overflow: hidden;
 }
 /* !----- / Menus ----- */
@@ -555,8 +556,8 @@ div.messages {
 .webform-client-form {
   margin: 32px -16px 16px;
   padding: 16px;
-  background: #ec5c1d;
-  background: rgba(236, 92, 29, 0.5);
+  background: #f2eeed;
+  background: rgba(231, 223, 222, 0.5);
   overflow: hidden;
 }
 /* !----- / Ticket link ----- */
