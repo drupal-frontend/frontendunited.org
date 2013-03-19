@@ -70,7 +70,7 @@ textarea {
   font-weight: 900;
 }
 .site-name span {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-family: "Maven Pro", Helvetica, Arial, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -101,7 +101,7 @@ textarea {
   padding: 0 16px;
 }
 .block-title {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-family: "Maven Pro", Helvetica, Arial, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -111,7 +111,7 @@ textarea {
   padding: 10px 0;
 }
 .text-content h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-family: "Maven Pro", Helvetica, Arial, sans-serif;
   font-weight: 900;
   text-transform: uppercase;

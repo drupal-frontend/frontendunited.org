@@ -578,6 +578,37 @@ div.messages {
   -moz-opacity: 0.8;
   opacity: 0.8;
 }
+/* !----- / Flickr badge ----- */
+#block-block-10 {
+  background-color: #e04a12;
+  margin-bottom: 10px;
+}
+#block-block-10 h2 {
+  color: #3c3c3b;
+  margin-bottom: 0;
+}
+#block-block-10 .content {
+  margin-right: -30px;
+}
+.flickr_badge_image {
+  background-color: #3c3c3b;
+  float: left;
+  height: 100px;
+  margin: 0 15px 10px 0;
+  text-align: center;
+  width: 120px;
+}
+.flickr_badge_image a {
+  border: none;
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.flickr_badge_image img {
+  vertical-align: middle;
+}
 /* !----- / Sponsors ----- */
 .block-sponsor-lists-sponsor-premium {
   padding: 8px 10px;
