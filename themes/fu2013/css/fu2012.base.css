@@ -561,15 +561,10 @@ div.messages {
   overflow: hidden;
 }
 /* !----- / Ticket link ----- */
-.ticket-link {
-  position: absolute;
-  right: 0;
-  top: -5px;
-}
 .ticket-link a:link,
 .ticket-link a:visited {
   display: block;
-  padding-right: 128px;
+  padding-right: 160px;
   background: transparent url(../images/ticket-med.png) 100% 50% no-repeat;
   height: 60px;
   line-height: 60px;
