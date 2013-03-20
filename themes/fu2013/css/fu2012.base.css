@@ -517,7 +517,7 @@ div.messages {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
-.navigation h2:hover + .main-menu {
+.navigation:hover > .main-menu {
   border-top: 20px solid  #fff;
   display: block;
 }
