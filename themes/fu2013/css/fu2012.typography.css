@@ -18,7 +18,7 @@ body {
 }
 .wf-inactive .site-name,
 .no-js .site-name {
-  font-size: 3.1em;
+  font-size: 4.4em;
 }
 .wf-inactive .site-name span,
 .no-js .site-name span {
@@ -56,7 +56,7 @@ textarea {
   margin-left: -8px;
 }
 .site-name h1 img {
-  width: 310px;
+  width: auto;
 }
 .site-name h2 {
   font-size: 1.3em;

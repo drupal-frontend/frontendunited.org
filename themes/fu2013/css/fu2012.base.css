@@ -316,6 +316,9 @@ body .zone {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+.zone-branding {
+  padding: 60px 0 0 0;
+}
 html .zone-postscript {
   padding-top: 20px;
 }
@@ -327,10 +330,10 @@ html .zone-postscript {
   -webkit-font-smoothing: antialiased;
 }
 .page {
-  background: #ffffff url(../images/brickwall.jpg) 75% -110px repeat-x;
+  background: #ffffff url(../images/brickwall.jpg) 75% -150px repeat-x;
 }
 .section-header {
-  min-height: 320px;
+  min-height: 290px;
 }
 #region-branding {
   margin: 0;
@@ -496,13 +499,40 @@ div.messages {
   margin: 8px 15px;
 }
 /* !----- / Main menu ----- */
+.navigation h2 {
+  clip: none;
+  display: inline-block;
+  font-weight: normal;
+  height: auto;
+  overflow: visible;
+  padding: 10.666666666666666px 10px;
+  position: static !important;
+  text-transform: uppercase;
+}
+.navigation h2 + .main-menu {
+  display: none;
+}
+.navigation h2:hover {
+  background: #3c3c3b;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+.navigation h2:hover + .main-menu {
+  border-top: 20px solid  #fff;
+  display: block;
+}
 .topbar {
   background: #fff;
   box-shadow: 0 0 12px #999;
+  position: absolute;
+  width: 100%;
+  z-index: 40;
+}
+.topbar li {
+  display: block;
 }
 .topbar a {
   display: block;
-  float: left;
   padding: 10.666666666666666px 10px;
   -webkit-transform-style: preserve-3d;
   -webkit-transition: background-color;

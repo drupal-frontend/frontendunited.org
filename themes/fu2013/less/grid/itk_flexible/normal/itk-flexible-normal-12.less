@@ -118,12 +118,41 @@
 .site-name {
   margin-top: 0;
   width: 60%;
+  h1 {
+    img {
+      width: 310px;
+    }
+  }
 }
 
+/* !----- / Main menu ----- */
+.navigation h2 {
+  clip: none;
+  display: block;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  &+ .main-menu {
+    display: block;
+  }
+}
 .topbar {
+  position: static;
+  width: 100%;
+  z-index: 50;
   a {
+    float: left;
     padding: 11px 16px;
   }
+}
+
+.page {
+  background-position: 51% -170px;
+}
+.section-header {
+  min-height: 270px;
 }
 
 .front {

@@ -4,22 +4,51 @@
 .site-name {
   margin-top: 0;
   width: 50%;
+  h1 {
+    img {
+      width: 310px;
+    }
+  }
 }
 
+/* !----- / Main menu ----- */
+.navigation h2 {
+  clip: none;
+  display: block;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  &+ .main-menu {
+    display: block;
+  }
+}
 .topbar {
+  position: static;
+  width: 100%;
+  z-index: 50;
   a {
+    float: left;
     padding: 11px 16px;
   }
 }
 
+.page {
+  background-position: 51% -170px;
+}
+.section-header {
+  min-height: 270px;
+}
+
 .front {
   .page {
-    background-position: -437px 45px;
+    background-position: -437px 25px;
   }
   .section-header {
     background: transparent url(../../../../images/graffiti.png) 95% 163px no-repeat;
     background-size: 350px;
-    min-height: 480px;
+    min-height: 460px;
   }
   .site-name {
     h2 {
@@ -30,7 +59,7 @@
 }
 
 .zone-branding {
-  background: url(../../../../images/design-code-share.png) 648px 49px no-repeat;
+  background: url(../../../../images/design-code-share.png) 90% 49px no-repeat;
   padding: 40px 0 0 0;
 }
 

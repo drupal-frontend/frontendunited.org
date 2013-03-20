@@ -352,7 +352,9 @@ body .zone {
   padding-bottom: @default-spacing;
 }
 
-
+.zone-branding {
+  padding: 60px 0 0 0;
+}
 
 html .zone-postscript {
   padding-top: 20px;
@@ -367,10 +369,10 @@ html .zone-postscript {
 }
 
 .page {
-  background: #fff url(../images/brickwall.jpg) 75% -110px repeat-x;
+  background: #fff url(../images/brickwall.jpg) 75% -150px repeat-x;
 }
 .section-header {
-  min-height: 320px;
+  min-height: 290px;
 }
 
 
@@ -557,13 +559,39 @@ div.messages {
 
 
 /* !----- / Main menu ----- */
+.navigation h2 {
+  clip: none;
+  display: inline-block;
+  font-weight: normal;
+  height: auto;
+  overflow: visible;
+  padding: (@default-spacing/1.5) 10px;
+  position: static !important;
+  text-transform: uppercase;
+  &+ .main-menu {
+    display: none;
+  }
+  &:hover {
+    background: @color-negative;
+    color: @color-text-negative;
+    -webkit-font-smoothing: antialiased;
+  }
+  &:hover + .main-menu {
+    border-top: 20px solid  #fff;
+    display: block;
+  }
+}
 .topbar {
   background: #fff;
   box-shadow: 0 0 12px #999;
-
+  position: absolute;
+  width: 100%;
+  z-index: 40;
+  li {
+    display: block;
+  }
   a {
     display: block;
-    float: left;
     padding: (@default-spacing/1.5) 10px;
     .transition (background-color);
 
