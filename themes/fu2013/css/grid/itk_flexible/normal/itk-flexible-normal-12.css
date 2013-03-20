@@ -256,6 +256,16 @@
   float: left;
   padding: 11px 16px;
 }
+.topbar a.mobile-menu {
+  display: none;
+}
+.main-menu {
+  border-top: none;
+  position: static !important;
+  clip: none;
+  overflow: visible;
+  height: auto;
+}
 .page {
   background-position: 51% -170px;
 }

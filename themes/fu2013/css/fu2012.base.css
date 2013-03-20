@@ -499,28 +499,6 @@ div.messages {
   margin: 8px 15px;
 }
 /* !----- / Main menu ----- */
-.navigation h2 {
-  clip: none;
-  display: inline-block;
-  font-weight: normal;
-  height: auto;
-  overflow: visible;
-  padding: 10.666666666666666px 10px;
-  position: static !important;
-  text-transform: uppercase;
-}
-.navigation h2 + .main-menu {
-  display: none;
-}
-.navigation h2:hover {
-  background: #3c3c3b;
-  color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-}
-.navigation:hover > .main-menu {
-  border-top: 20px solid  #fff;
-  display: block;
-}
 .topbar {
   background: #fff;
   box-shadow: 0 0 12px #999;
@@ -566,6 +544,17 @@ div.messages {
   background: #3c3c3b;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
+}
+.topbar a.mobile-menu {
+  display: block;
+  float: none;
+}
+.topbar a.mobile-menu:hover ~ .main-menu {
+  border-top: 20px solid  #fff;
+  position: static !important;
+  clip: none;
+  overflow: visible;
+  height: auto;
 }
 /* !----- / Webform ----- */
 .webform-client-form {

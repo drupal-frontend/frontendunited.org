@@ -559,28 +559,6 @@ div.messages {
 
 
 /* !----- / Main menu ----- */
-.navigation h2 {
-  clip: none;
-  display: inline-block;
-  font-weight: normal;
-  height: auto;
-  overflow: visible;
-  padding: (@default-spacing/1.5) 10px;
-  position: static !important;
-  text-transform: uppercase;
-  &+ .main-menu {
-    display: none;
-  }
-  &:hover {
-    background: @color-negative;
-    color: @color-text-negative;
-    -webkit-font-smoothing: antialiased;
-  }
-}
-.navigation:hover > .main-menu {
-  border-top: 20px solid  #fff;
-  display: block;
-}
 .topbar {
   background: #fff;
   box-shadow: 0 0 12px #999;
@@ -599,7 +577,6 @@ div.messages {
     &:visited {
       color: #000;
     }
-
     &.active {
       background: @color-negative;
       color: @color-text-negative;
@@ -619,6 +596,18 @@ div.messages {
       -webkit-font-smoothing: antialiased;
     }
   }
+}
+
+.topbar a.mobile-menu{
+  display: block;
+  float: none;
+}
+.topbar a.mobile-menu:hover ~ .main-menu {
+  border-top: 20px solid  #fff;
+  position: static !important;
+  clip: none;
+  overflow: visible;
+  height: auto;
 }
 
 /* !----- / Webform ----- */
