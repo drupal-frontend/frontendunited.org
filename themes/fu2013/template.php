@@ -133,5 +133,5 @@ function fu2013_form_mailchimp_lists_user_subscribe_form_1_alter(&$form) {
 }
 
 function fu2013_preprocess_html(&$variables) {
-drupal_add_css('http://fonts.googleapis.com/css?family=Maven+Pro:400,900', array('type' => 'external'));
+  drupal_add_css('http://fonts.googleapis.com/css?family=Maven+Pro:400,900', array('type' => 'external'));
 }

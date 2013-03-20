@@ -327,25 +327,10 @@ html .zone-postscript {
   -webkit-font-smoothing: antialiased;
 }
 .page {
-  background: #ffffff url(../images/brickwall.jpg) 185% -180px repeat-x;
+  background: #ffffff url(../images/brickwall.jpg) 75% -110px repeat-x;
 }
 .section-header {
-  min-height: 250px;
-}
-.front .page {
-  background-position: 51% 45px;
-}
-.front .section-header {
-  background: transparent url(../images/graffiti.png) 825px 133px no-repeat;
-  min-height: 480px;
-}
-.zone-branding {
-  background: url(../images/design-code-share.png) 648px 49px no-repeat;
-  padding: 40px 0 0 0;
-}
-.front .zone-branding {
-  background-position: 648px 14px;
-  padding: 112px 0 0 0;
+  min-height: 320px;
 }
 #region-branding {
   margin: 0;
@@ -518,7 +503,7 @@ div.messages {
 .topbar a {
   display: block;
   float: left;
-  padding: 10.666666666666666px 16px;
+  padding: 10.666666666666666px 10px;
   -webkit-transform-style: preserve-3d;
   -webkit-transition: background-color;
   -moz-transition: background-color;
