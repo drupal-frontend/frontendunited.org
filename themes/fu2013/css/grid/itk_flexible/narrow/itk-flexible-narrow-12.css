@@ -27,7 +27,8 @@
   float: left;
   padding: 11px 16px;
 }
-.topbar a.mobile-menu {
+#mobile-menu,
+label.mobile-menu {
   display: none;
 }
 .main-menu {

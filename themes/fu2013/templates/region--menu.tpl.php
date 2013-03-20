@@ -7,8 +7,11 @@
 
 <div<?php print $attributes; ?>>
   <?php if ($main_menu || $secondary_menu): ?>
-  <nav class="navigation">
-    <?php print l(t('Menu'), '', array('attributes' => array('class' => array('mobile-menu')))); ?>
+  <nav class="navigation" role="custom-dropdown">
+
+    <input type="checkbox" id="mobile-menu">
+    <label for="mobile-menu" class="mobile-menu" onclick></label>
+
     <?php print theme('links__system_main_menu', array(
       'links' => $main_menu,
       'attributes' => array(

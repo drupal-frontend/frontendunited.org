@@ -511,7 +511,7 @@ div.messages {
 }
 .topbar a {
   display: block;
-  padding: 10.666666666666666px 10px;
+  padding: 11px 10px;
   -webkit-transform-style: preserve-3d;
   -webkit-transition: background-color;
   -moz-transition: background-color;
@@ -545,16 +545,52 @@ div.messages {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
-.topbar a.mobile-menu {
-  display: block;
-  float: none;
+body {
+  -webkit-animation: bugfix infinite 1s;
 }
-.topbar a.mobile-menu:hover ~ .main-menu {
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+/* default checkbox */
+input#mobile-menu {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+label.mobile-menu {
+  cursor: pointer;
+  display: block;
+  height: 1.5em;
+  padding: 11px 10px;
+  text-transform: uppercase;
+  user-select: none;
+}
+nav[role="custom-dropdown"] .main-menu {
+  height: 100%;
+}
+nav[role="custom-dropdown"] label.test {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+nav[role="custom-dropdown"] label.mobile-menu:after {
+  position: absolute;
+  content: "\2261\00a0Menu";
+}
+nav[role="custom-dropdown"] input#mobile-menu:checked ~ .main-menu {
   border-top: 20px solid  #fff;
   position: static !important;
   clip: none;
   overflow: visible;
   height: auto;
+}
+nav[role="custom-dropdown"] input#mobile-menu:checked ~ .main-menu > li {
+  width: 100%;
 }
 /* !----- / Webform ----- */
 .webform-client-form {
