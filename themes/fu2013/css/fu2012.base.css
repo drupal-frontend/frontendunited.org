@@ -550,10 +550,10 @@ body {
 }
 @-webkit-keyframes bugfix {
   from {
-    padding: 0;
+    margin: 0;
   }
   to {
-    padding: 0;
+    margin: 0;
   }
 }
 /* default checkbox */
