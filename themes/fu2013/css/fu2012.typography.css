@@ -86,7 +86,7 @@ textarea {
   margin-left: -8px;
 }
 .front .site-name h1 img {
-  width: auto;
+  width: 100%;
 }
 .front .site-name h2 {
   font-size: 1.5em;
