@@ -98,6 +98,7 @@ textarea {
   text-transform: uppercase;
   font-size: 2.5em;
   line-height: 1.2em;
+  margin-bottom: 0.75em;
   padding: 0 16px;
 }
 .block-title {

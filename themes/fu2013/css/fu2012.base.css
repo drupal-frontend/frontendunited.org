@@ -610,6 +610,7 @@ nav[role="custom-dropdown"] input#mobile-menu:checked ~ .main-menu > li {
   line-height: 60px;
   color: #3c3c3b;
   border: none;
+  margin-bottom: -1px;
 }
 .ticket-link a:hover,
 .ticket-link a:active {
@@ -676,8 +677,35 @@ nav[role="custom-dropdown"] input#mobile-menu:checked ~ .main-menu > li {
   border-bottom: 1px solid #d9dada;
 }
 .schedule-table td:first-child {
-  width: 20%;
+  width: 10%;
 }
 .schedule-table td[[object Object]="2"] {
   width: 63%;
+}
+/* !----- / Session information ----- */
+.node-type-session-information .field {
+  margin-bottom: 1em;
+}
+.node-type-session-information .field-label {
+  float: left;
+}
+.node-type-session-information .field-name-field-session-room {
+  font-family: "Maven Pro", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.node-type-session-information .title {
+  padding: 0;
+}
+.node-type-speaker .field {
+  margin-bottom: 1em;
+}
+.node-type-speaker .field-label {
+  float: left;
+}
+.node-type-speaker .title {
+  padding: 0;
+}
+.node-type-time-slot .title {
+  padding: 0;
 }
