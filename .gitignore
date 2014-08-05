@@ -2,3 +2,4 @@ settings.php
 modules/development/
 files/
 private/
+*.codekit

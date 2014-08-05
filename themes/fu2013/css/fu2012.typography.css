@@ -86,7 +86,7 @@ textarea {
   margin-left: -8px;
 }
 .front .site-name h1 img {
-  width: 100%;
+  width: auto;
 }
 .front .site-name h2 {
   font-size: 1.5em;
@@ -201,7 +201,7 @@ a.alternative:visited {
   color: #3c3c3b;
 }
 .coverlayer .block-title {
-  font-size: 4.0000000005em;
+  font-size: 4em;
 }
 .coverlayer a:link {
   color: #3c3c3b;

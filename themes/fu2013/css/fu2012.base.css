@@ -53,7 +53,6 @@ input[type=radio] {
   margin: 3px 0;
   *margin-top: 0;
   /* IE6-7 */
-
   line-height: normal;
   border: none;
   -webkit-transform-style: flat;
@@ -79,7 +78,6 @@ input[type=file] {
   line-height: 27px;
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
-
 }
 select[multiple] {
   height: inherit;
@@ -149,10 +147,8 @@ textarea {
   color: #404040;
   *padding: 0 0 5px 145px;
   /* IE6-7 */
-
   *line-height: 1.5;
   /* IE6-7 */
-
 }
 .page .form-stacked fieldset {
   padding-top: 9px;
@@ -290,7 +286,7 @@ textarea[readonly] {
 /* !----- / Sections ----- */
 .section-content {
   padding-bottom: 32px;
-  padding-top: 32px;
+  padding-top: 0;
 }
 .section-footer,
 .zone-secondary {
@@ -330,7 +326,7 @@ html .zone-postscript {
   -webkit-font-smoothing: antialiased;
 }
 .page {
-  background: #ffffff url(../images/brickwall.jpg) 75% -150px repeat-x;
+  background: #ffffff url(../images/wall.jpg) center 45px repeat-x;
 }
 .section-header {
   min-height: 290px;
@@ -399,11 +395,9 @@ ul.menu {
   display: block;
   float: left;
   /* LTR */
-
   vertical-align: bottom;
   margin: 0 5px 0 0;
   /* LTR */
-
 }
 .tabs ul.primary li a {
   color: #222;
@@ -414,12 +408,8 @@ ul.menu {
   font-size: 12px;
   float: left;
   /* not LTR */
-
   padding: 0 10px 3px;
   margin: 0;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   -khtml-border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -445,17 +435,14 @@ ul.menu {
   display: block;
   float: left;
   /* LTR */
-
 }
 .tabs ul.secondary li:last-child {
   border-right: none;
   /* LTR */
-
 }
 .tabs ul.secondary li:first-child {
   padding-left: 0;
   /* LTR */
-
 }
 .tabs ul.secondary li a {
   padding: 0.25em 0.5em;
@@ -463,9 +450,6 @@ ul.menu {
 .tabs ul.secondary li a.active {
   background: #f2f2f2;
   border-bottom: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -679,7 +663,7 @@ nav[role="custom-dropdown"] input#mobile-menu:checked ~ .main-menu > li {
 .schedule-table td:first-child {
   width: 10%;
 }
-.schedule-table td[[object Object]="2"] {
+.schedule-table td[colspan="2"] {
   width: 63%;
 }
 /* !----- / Session information ----- */
