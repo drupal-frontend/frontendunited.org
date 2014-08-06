@@ -38,9 +38,6 @@ label.mobile-menu {
   overflow: visible;
   height: auto;
 }
-.page {
-  background-position: 51% -170px;
-}
 .section-header {
   min-height: 270px;
 }
@@ -48,9 +45,9 @@ label.mobile-menu {
   background-position: -437px 25px;
 }
 .front .section-header {
-  background: transparent url(../../../../images/graffiti.png) 95% 163px no-repeat;
-  background-size: 350px;
-  min-height: 460px;
+  background: transparent url(../../../../images/bike.png) 95% 130px no-repeat;
+  background-size: 440px;
+  min-height: 490px;
 }
 .front .site-name h2 {
   font-size: 2.125em;
