@@ -277,8 +277,8 @@ label.mobile-menu {
   background-position: 51% 45px;
 }
 .front .section-header {
-  background: transparent url(../../../../images/bike.png) 86% 159px no-repeat;
-  min-height: 480px;
+  background: transparent url(../../../../images/bike.png) 86% 89px no-repeat;
+  min-height: 450px;
 }
 .front .site-name h2 {
   font-size: 2.125em;
